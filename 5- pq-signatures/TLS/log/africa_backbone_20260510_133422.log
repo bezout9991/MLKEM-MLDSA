@@ -1,0 +1,155 @@
+*************************************
+Paramètres valides. Démarrage avec:
+  Protocole:       tls
+  Mode d'Auth:     single
+  Mode Capture:    nocapture
+  Profil Réseau:   simple
+  Perte %:         4
+  Délai (ms):      200
+  Exécutions:      50
+  Signatures:      ed25519 secp384r1 secp521r1
+  KEMS Niveau 1:   P-256 x25519 p256_mlkem512 x25519_mlkem512 mlkem512
+  KEMS Niveau 3:   P-384 x448 p384_mlkem768 x448_mlkem768 mlkem768
+  KEMS Niveau 5:   P-521 p521_mlkem1024 mlkem1024
+*************************************
+Exécution sur Linux
+
+*************************************
+***RÉSEAU ET VOLUME *****************
+*************************************
+398244dfe1fa46e0fbe728a4ac6c801617dd2a0c8a66372c602ce40b737d2257
+✅ Réseau localNet créé.
+cert
+✅ Volume cert créé.
+*************************************
+
+ ==> Exécution pour SIG_ALG: ed25519
+
+ ==> Création des certificats et clés
+Creating certificates
+Using default procedure for ed25519
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=ed25519 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Exécution du serveur Docker...
+1b509cdd2c2418ea1a6561dc8b5a75ca7aaee464b267296d3e37bff7c73a2f38
+    Recherche de l'IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Exécution du client Docker... 172.18.0.2
+b6c0c3da56d37334db44e596d1c4829420800e2e9fe6dd32a0967d1048db4a47
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Exécution du test  ... 
+  -> Pumba: application des regles tc sur loss
+  ⚠ Erreur lors de l'application des regles tc sur loss
+  ✅ Regles tc appliquees sur loss
+  -> Pumba: application des regles tc sur client
+Checking netem rules on eth0...
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=P-256
+Execution 1 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1007.69 ms
+Execution 2 - TLS Single
+Handshake duration: 806.03 ms
+Execution 3 - TLS Single
+Handshake duration: 803.88 ms
+Execution 4 - TLS Single
+Handshake duration: 804.12 ms
+Execution 5 - TLS Single
+Handshake duration: 805.10 ms
+Execution 6 - TLS Single
+Handshake duration: 805.62 ms
+Execution 7 - TLS Single
+Handshake duration: 1826.65 ms
+Execution 8 - TLS Single
+Handshake duration: 805.00 ms
+Execution 9 - TLS Single
+Handshake duration: 824.41 ms
+Execution 10 - TLS Single
+Handshake duration: 803.31 ms
+Execution 11 - TLS Single
+Handshake duration: 803.92 ms
+Execution 12 - TLS Single
+Handshake duration: 805.73 ms
+Execution 13 - TLS Single
+Handshake duration: 805.40 ms
+Execution 14 - TLS Single
+Handshake duration: 803.69 ms
+Execution 15 - TLS Single
+Handshake duration: 806.44 ms
+Execution 16 - TLS Single
+Handshake duration: 811.50 ms
+Execution 17 - TLS Single
+Handshake duration: 806.39 ms
+Execution 18 - TLS Single
+Handshake duration: 805.07 ms
+Execution 19 - TLS Single
+Handshake duration: 807.69 ms
+Execution 20 - TLS Single
+Handshake duration: 807.93 ms
+Execution 21 - TLS Single
+Handshake duration: 804.20 ms
+Execution 22 - TLS Single
+Handshake duration: 803.67 ms
+Execution 23 - TLS Single
+Handshake duration: 804.10 ms
+Execution 24 - TLS Single
+Handshake duration: 811.32 ms
+Execution 25 - TLS Single
+Handshake duration: 804.06 ms
+Execution 26 - TLS Single
+Handshake duration: 804.63 ms
+Execution 27 - TLS Single
+Handshake duration: 811.24 ms
+Execution 28 - TLS Single
+Handshake duration: 812.43 ms
+Execution 29 - TLS Single
+Handshake duration: 815.94 ms
+Execution 30 - TLS Single
+Handshake duration: 815.42 ms
+Execution 31 - TLS Single
+Handshake duration: 1854.18 ms
+Execution 32 - TLS Single
+Handshake duration: 807.63 ms
+Execution 33 - TLS Single
+Handshake duration: 1847.98 ms
+Execution 34 - TLS Single
+Handshake duration: 804.83 ms
+Execution 35 - TLS Single
+Handshake duration: 1813.68 ms
+Execution 36 - TLS Single
+Handshake duration: 1843.18 ms
+Execution 37 - TLS Single
+Handshake duration: 808.90 ms
+Execution 38 - TLS Single
+Handshake duration: 808.06 ms
+Execution 39 - TLS Single
+Handshake duration: 803.98 ms
+Execution 40 - TLS Single
+Handshake duration: 832.95 ms
+Execution 41 - TLS Single
+Handshake duration: 804.50 ms
+Execution 42 - TLS Single
+Handshake duration: 805.66 ms
+Execution 43 - TLS Single
+Execution 43 - TIMEOUT
+Execution 44 - TLS Single
+Execution 44 - TIMEOUT
+Execution 45 - TLS Single

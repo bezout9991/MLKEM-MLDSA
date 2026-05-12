@@ -1,0 +1,325 @@
+*************************************
+Parameters valid. Starting with:
+  Protocol:        tls
+  Auth Mode:       single
+  Capture Mode:    nocapture
+  Network Profile: simple
+  Loss %:          4
+  Delay (ms):      200
+  Executions:      50
+  Signature:       ed25519 secp384r1 secp521r1 mldsa44 mldsa65 mldsa87
+  KEMS Level 1:    P-256 x25519 hqc128 p256_hqc128 x25519_hqc128
+  KEMS Level 3:    P-384 x448 hqc192 p384_hqc192 x448_hqc192
+  KEMS Level 5:    P-521 hqc256 p521_hqc256
+*************************************
+Runnig on Linux
+
+*************************************
+***NETWORK AND VOLUMEN **************
+*************************************
+00dde940cb6d20626ec12dbcc91b6454964eb2a2d47dfd7f73ab106322ad0f44
+✅ Red localNet created.
+cert
+✅ Volumen cert created.
+*************************************
+
+ ==> Executing for SIG_ALG: ed25519
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for ed25519
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=ed25519 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Executing docker Server...
+886e4f49ba9b54900982b57dc6dcb57dd75a24b4b0acbe9c1e6f63927286f5f8
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+2346a09bccf411b1fcdf7a699e6009b85d5c56286da6b24b55b7fd85f275abf3
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=P-256
+Execution 1 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1008.96 ms
+Execution 2 - TLS Single
+Handshake duration: 806.37 ms
+Execution 3 - TLS Single
+Handshake duration: 1859.95 ms
+Execution 4 - TLS Single
+Handshake duration: 803.84 ms
+Execution 5 - TLS Single
+Handshake duration: 1823.38 ms
+Execution 6 - TLS Single
+Handshake duration: 804.94 ms
+Execution 7 - TLS Single
+Handshake duration: 804.27 ms
+Execution 8 - TLS Single
+Handshake duration: 806.21 ms
+Execution 9 - TLS Single
+Handshake duration: 803.62 ms
+Execution 10 - TLS Single
+Handshake duration: 805.20 ms
+Execution 11 - TLS Single
+Handshake duration: 806.43 ms
+Execution 12 - TLS Single
+Handshake duration: 806.95 ms
+Execution 13 - TLS Single
+Handshake duration: 803.80 ms
+Execution 14 - TLS Single
+Handshake duration: 804.62 ms
+Execution 15 - TLS Single
+Handshake duration: 803.54 ms
+Execution 16 - TLS Single
+Handshake duration: 803.31 ms
+Execution 17 - TLS Single
+Handshake duration: 803.88 ms
+Execution 18 - TLS Single
+Handshake duration: 1813.33 ms
+Execution 19 - TLS Single
+Handshake duration: 804.14 ms
+Execution 20 - TLS Single
+Handshake duration: 804.48 ms
+Execution 21 - TLS Single
+Handshake duration: 804.26 ms
+Execution 22 - TLS Single
+Handshake duration: 805.56 ms
+Execution 23 - TLS Single
+Handshake duration: 809.84 ms
+Execution 24 - TLS Single
+Handshake duration: 821.60 ms
+Execution 25 - TLS Single
+Handshake duration: 806.41 ms
+Execution 26 - TLS Single
+Handshake duration: 804.22 ms
+Execution 27 - TLS Single
+Handshake duration: 817.63 ms
+Execution 28 - TLS Single
+Handshake duration: 806.39 ms
+Execution 29 - TLS Single
+Handshake duration: 805.61 ms
+Execution 30 - TLS Single
+Handshake duration: 806.18 ms
+Execution 31 - TLS Single
+Handshake duration: 808.98 ms
+Execution 32 - TLS Single
+Handshake duration: 835.87 ms
+Execution 33 - TLS Single
+Handshake duration: 805.13 ms
+Execution 34 - TLS Single
+Handshake duration: 805.56 ms
+Execution 35 - TLS Single
+Handshake duration: 809.02 ms
+Execution 36 - TLS Single
+Handshake duration: 1836.11 ms
+Execution 37 - TLS Single
+Handshake duration: 1862.95 ms
+Execution 38 - TLS Single
+Handshake duration: 804.37 ms
+Execution 39 - TLS Single
+Handshake duration: 1850.19 ms
+Execution 40 - TLS Single
+Handshake duration: 804.60 ms
+Execution 41 - TLS Single
+Handshake duration: 812.29 ms
+Execution 42 - TLS Single
+Handshake duration: 808.79 ms
+Execution 43 - TLS Single
+Handshake duration: 1823.25 ms
+Execution 44 - TLS Single
+Handshake duration: 1805.82 ms
+Execution 45 - TLS Single
+Handshake duration: 804.30 ms
+Execution 46 - TLS Single
+Handshake duration: 808.68 ms
+Execution 47 - TLS Single
+Handshake duration: 803.70 ms
+Execution 48 - TLS Single
+Handshake duration: 806.47 ms
+Execution 49 - TLS Single
+Handshake duration: 808.81 ms
+Execution 50 - TLS Single
+Handshake duration: 804.75 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x25519
+
+    Executing docker Server...
+serveur
+client
+b2b1414d2fea82c085ac3483627dba6796966d8b52001a258f5687d9c7f7a29e
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+cfc1f3b618912317a233d8040520c278638b1f9f7481ed2cda54f2c8ade002ac
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e79: root refcnt 7 limit 1000 delay 200ms loss 4% seed 11202249652540053797
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=x25519
+Execution 1 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1004.12 ms
+Execution 2 - TLS Single
+Handshake duration: 803.66 ms
+Execution 3 - TLS Single
+Handshake duration: 804.42 ms
+Execution 4 - TLS Single
+Handshake duration: 804.24 ms
+Execution 5 - TLS Single
+Handshake duration: 803.30 ms
+Execution 6 - TLS Single
+Handshake duration: 807.66 ms
+Execution 7 - TLS Single
+Handshake duration: 806.88 ms
+Execution 8 - TLS Single
+Handshake duration: 804.18 ms
+Execution 9 - TLS Single
+Handshake duration: 805.91 ms
+Execution 10 - TLS Single
+Handshake duration: 810.31 ms
+Execution 11 - TLS Single
+Handshake duration: 805.55 ms
+Execution 12 - TLS Single
+Handshake duration: 805.24 ms
+Execution 13 - TLS Single
+Handshake duration: 803.62 ms
+Execution 14 - TLS Single
+Handshake duration: 803.31 ms
+Execution 15 - TLS Single
+Handshake duration: 805.43 ms
+Execution 16 - TLS Single
+Handshake duration: 805.11 ms
+Execution 17 - TLS Single
+Handshake duration: 806.75 ms
+Execution 18 - TLS Single
+Handshake duration: 803.36 ms
+Execution 19 - TLS Single
+Handshake duration: 804.36 ms
+Execution 20 - TLS Single
+Handshake duration: 803.22 ms
+Execution 21 - TLS Single
+Handshake duration: 804.68 ms
+Execution 22 - TLS Single
+Handshake duration: 804.69 ms
+Execution 23 - TLS Single
+Handshake duration: 1864.09 ms
+Execution 24 - TLS Single
+Handshake duration: 806.93 ms
+Execution 25 - TLS Single
+Handshake duration: 803.58 ms
+Execution 26 - TLS Single
+Handshake duration: 818.27 ms
+Execution 27 - TLS Single
+Handshake duration: 1847.46 ms
+Execution 28 - TLS Single
+Handshake duration: 808.93 ms
+Execution 29 - TLS Single
+Handshake duration: 1812.56 ms
+Execution 30 - TLS Single
+Handshake duration: 824.52 ms
+Execution 31 - TLS Single
+Handshake duration: 805.22 ms
+Execution 32 - TLS Single
+Handshake duration: 806.01 ms
+Execution 33 - TLS Single
+Handshake duration: 817.29 ms
+Execution 34 - TLS Single
+Handshake duration: 805.13 ms
+Execution 35 - TLS Single
+Handshake duration: 1864.96 ms
+Execution 36 - TLS Single
+Handshake duration: 805.87 ms
+Execution 37 - TLS Single
+Handshake duration: 1880.64 ms
+Execution 38 - TLS Single
+Handshake duration: 1832.20 ms
+Execution 39 - TLS Single
+Handshake duration: 805.10 ms
+Execution 40 - TLS Single
+Handshake duration: 813.83 ms
+Execution 41 - TLS Single
+Handshake duration: 804.67 ms
+Execution 42 - TLS Single
+Handshake duration: 814.76 ms
+Execution 43 - TLS Single
+Handshake duration: 806.91 ms
+Execution 44 - TLS Single
+Handshake duration: 836.14 ms
+Execution 45 - TLS Single
+Handshake duration: 808.63 ms
+Execution 46 - TLS Single
+Handshake duration: 813.77 ms
+Execution 47 - TLS Single
+Handshake duration: 809.87 ms
+Execution 48 - TLS Single
+Handshake duration: 804.03 ms
+Execution 49 - TLS Single
+Handshake duration: 804.63 ms
+Execution 50 - TLS Single
+Handshake duration: 805.56 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc128
+
+    Executing docker Server...
+serveur
+client
+2b11014bc95c0d114fbde81ba4fa454c2f5611c89c90c79966e823fd0746a8fa
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+9d685a37a5104ad8e8ed26a08917461d4edb0edc98541f44a00198194b661953
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e7c: root refcnt 7 limit 1000 delay 200ms loss 4% seed 10867294994777240442
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=hqc128
+Execution 1 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 3690.30 ms
+Execution 2 - TLS Single

@@ -1,0 +1,3465 @@
+*************************************
+Parameters valid. Starting with:
+  Protocol:        quic
+  Auth Mode:       single
+  Capture Mode:    nocapture
+  Network Profile: simple
+  Loss %:          4
+  Delay (ms):      200
+  Executions:      50
+  Signature:       ed25519 secp384r1 secp521r1 mldsa44 mldsa65 mldsa87
+  KEMS Level 1:    P-256 x25519 hqc128 p256_hqc128 x25519_hqc128
+  KEMS Level 3:    P-384 x448 hqc192 p384_hqc192 x448_hqc192
+  KEMS Level 5:    P-521 hqc256 p521_hqc256
+*************************************
+Runnig on Linux
+cert
+localNet
+
+*************************************
+***NETWORK AND VOLUMEN **************
+*************************************
+411784b1de447ad550158df3638ffcc83f4bb2b5174a7e7b0f0a75addff97529
+✅ Red localNet created.
+cert
+✅ Volumen cert created.
+*************************************
+
+ ==> Executing for SIG_ALG: ed25519
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for ed25519
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=ed25519 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Executing docker Server...
+b816bafe01ae3992afb157bb61b353555057b4e246224216c192ed5495119dc8
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+a90d4c50f94418563f92a25c3aa4406e4765b24c9d4c42181d573917d862272a
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=P-256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 613.30 ms
+Execution 2 - QUIC Single
+Handshake duration: 405.25 ms
+Execution 3 - QUIC Single
+Handshake duration: 411.50 ms
+Execution 4 - QUIC Single
+Handshake duration: 404.07 ms
+Execution 5 - QUIC Single
+Handshake duration: 406.28 ms
+Execution 6 - QUIC Single
+Handshake duration: 406.07 ms
+Execution 7 - QUIC Single
+Handshake duration: 408.23 ms
+Execution 8 - QUIC Single
+Handshake duration: 405.69 ms
+Execution 9 - QUIC Single
+Handshake duration: 420.28 ms
+Execution 10 - QUIC Single
+Handshake duration: 408.62 ms
+Execution 11 - QUIC Single
+Handshake duration: 406.17 ms
+Execution 12 - QUIC Single
+Handshake duration: 426.66 ms
+Execution 13 - QUIC Single
+Handshake duration: 419.71 ms
+Execution 14 - QUIC Single
+Handshake duration: 405.32 ms
+Execution 15 - QUIC Single
+Handshake duration: 405.30 ms
+Execution 16 - QUIC Single
+Handshake duration: 410.53 ms
+Execution 17 - QUIC Single
+Handshake duration: 407.01 ms
+Execution 18 - QUIC Single
+Handshake duration: 1404.86 ms
+Execution 19 - QUIC Single
+Handshake duration: 408.35 ms
+Execution 20 - QUIC Single
+Handshake duration: 407.66 ms
+Execution 21 - QUIC Single
+Handshake duration: 408.68 ms
+Execution 22 - QUIC Single
+Handshake duration: 411.40 ms
+Execution 23 - QUIC Single
+Handshake duration: 408.75 ms
+Execution 24 - QUIC Single
+Handshake duration: 404.01 ms
+Execution 25 - QUIC Single
+Handshake duration: 1403.16 ms
+Execution 26 - QUIC Single
+Handshake duration: 412.97 ms
+Execution 27 - QUIC Single
+Handshake duration: 409.42 ms
+Execution 28 - QUIC Single
+Handshake duration: 1415.84 ms
+Execution 29 - QUIC Single
+Handshake duration: 404.48 ms
+Execution 30 - QUIC Single
+Handshake duration: 403.96 ms
+Execution 31 - QUIC Single
+Handshake duration: 405.39 ms
+Execution 32 - QUIC Single
+Handshake duration: 403.80 ms
+Execution 33 - QUIC Single
+Handshake duration: 424.36 ms
+Execution 34 - QUIC Single
+Handshake duration: 405.24 ms
+Execution 35 - QUIC Single
+Handshake duration: 417.05 ms
+Execution 36 - QUIC Single
+Handshake duration: 405.62 ms
+Execution 37 - QUIC Single
+Handshake duration: 409.53 ms
+Execution 38 - QUIC Single
+Handshake duration: 449.03 ms
+Execution 39 - QUIC Single
+Handshake duration: 429.03 ms
+Execution 40 - QUIC Single
+Handshake duration: 405.23 ms
+Execution 41 - QUIC Single
+Handshake duration: 403.81 ms
+Execution 42 - QUIC Single
+Handshake duration: 413.06 ms
+Execution 43 - QUIC Single
+Handshake duration: 1416.19 ms
+Execution 44 - QUIC Single
+Handshake duration: 404.00 ms
+Execution 45 - QUIC Single
+Handshake duration: 405.68 ms
+Execution 46 - QUIC Single
+Handshake duration: 412.25 ms
+Execution 47 - QUIC Single
+Handshake duration: 428.27 ms
+Execution 48 - QUIC Single
+Handshake duration: 406.49 ms
+Execution 49 - QUIC Single
+Handshake duration: 407.71 ms
+Execution 50 - QUIC Single
+Handshake duration: 404.25 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x25519
+
+    Executing docker Server...
+serveur
+client
+5770982383bce48da0dc26cf23b29840f09223daec47e82ca4cef2cdcb6eaffb
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+d37ce9e47103e2a86132526d19d0db19bdb1208e0aa9e4e7145356e28843e5b8
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=x25519
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 610.88 ms
+Execution 2 - QUIC Single
+Handshake duration: 405.00 ms
+Execution 3 - QUIC Single
+Handshake duration: 410.41 ms
+Execution 4 - QUIC Single
+Handshake duration: 407.97 ms
+Execution 5 - QUIC Single
+Handshake duration: 416.39 ms
+Execution 6 - QUIC Single
+Handshake duration: 406.00 ms
+Execution 7 - QUIC Single
+Handshake duration: 420.65 ms
+Execution 8 - QUIC Single
+Handshake duration: 403.48 ms
+Execution 9 - QUIC Single
+Handshake duration: 501.93 ms
+Execution 10 - QUIC Single
+Handshake duration: 408.05 ms
+Execution 11 - QUIC Single
+Handshake duration: 404.26 ms
+Execution 12 - QUIC Single
+Handshake duration: 409.33 ms
+Execution 13 - QUIC Single
+Handshake duration: 404.41 ms
+Execution 14 - QUIC Single
+Handshake duration: 406.71 ms
+Execution 15 - QUIC Single
+Handshake duration: 442.12 ms
+Execution 16 - QUIC Single
+Handshake duration: 405.01 ms
+Execution 17 - QUIC Single
+Handshake duration: 403.35 ms
+Execution 18 - QUIC Single
+Handshake duration: 407.75 ms
+Execution 19 - QUIC Single
+Handshake duration: 404.99 ms
+Execution 20 - QUIC Single
+Handshake duration: 413.07 ms
+Execution 21 - QUIC Single
+Handshake duration: 414.38 ms
+Execution 22 - QUIC Single
+Handshake duration: 404.07 ms
+Execution 23 - QUIC Single
+Handshake duration: 404.33 ms
+Execution 24 - QUIC Single
+Handshake duration: 405.04 ms
+Execution 25 - QUIC Single
+Handshake duration: 403.12 ms
+Execution 26 - QUIC Single
+Handshake duration: 407.77 ms
+Execution 27 - QUIC Single
+Handshake duration: 405.39 ms
+Execution 28 - QUIC Single
+Handshake duration: 404.15 ms
+Execution 29 - QUIC Single
+Handshake duration: 404.09 ms
+Execution 30 - QUIC Single
+Handshake duration: 403.64 ms
+Execution 31 - QUIC Single
+Handshake duration: 407.62 ms
+Execution 32 - QUIC Single
+Handshake duration: 403.75 ms
+Execution 33 - QUIC Single
+Handshake duration: 403.67 ms
+Execution 34 - QUIC Single
+Handshake duration: 404.54 ms
+Execution 35 - QUIC Single
+Handshake duration: 403.06 ms
+Execution 36 - QUIC Single
+Handshake duration: 404.47 ms
+Execution 37 - QUIC Single
+Handshake duration: 405.40 ms
+Execution 38 - QUIC Single
+Handshake duration: 404.39 ms
+Execution 39 - QUIC Single
+Handshake duration: 404.09 ms
+Execution 40 - QUIC Single
+Handshake duration: 403.93 ms
+Execution 41 - QUIC Single
+Handshake duration: 406.59 ms
+Execution 42 - QUIC Single
+Handshake duration: 405.41 ms
+Execution 43 - QUIC Single
+Handshake duration: 404.64 ms
+Execution 44 - QUIC Single
+Handshake duration: 404.09 ms
+Execution 45 - QUIC Single
+Handshake duration: 403.46 ms
+Execution 46 - QUIC Single
+Handshake duration: 405.47 ms
+Execution 47 - QUIC Single
+Handshake duration: 407.20 ms
+Execution 48 - QUIC Single
+Handshake duration: 403.93 ms
+Execution 49 - QUIC Single
+Handshake duration: 410.93 ms
+Execution 50 - QUIC Single
+Handshake duration: 1410.60 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc128
+
+    Executing docker Server...
+serveur
+client
+2876e3d8d9d2932f10bfcf73f88fd37feaf6a070d7405866bc0f12d431fa20f5
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+57ea87b9a8e9ab1835e150bea51eb296c932a3800e1911a9afc592d3ef7fa376
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e85: root refcnt 7 limit 1000 delay 200ms loss 4% seed 8269027755608445143
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 669.88 ms
+Execution 2 - QUIC Single
+Handshake duration: 431.50 ms
+Execution 3 - QUIC Single
+Handshake duration: 421.52 ms
+Execution 4 - QUIC Single
+Handshake duration: 498.51 ms
+Execution 5 - QUIC Single
+Handshake duration: 429.88 ms
+Execution 6 - QUIC Single
+Handshake duration: 425.80 ms
+Execution 7 - QUIC Single
+Handshake duration: 426.05 ms
+Execution 8 - QUIC Single
+Handshake duration: 427.01 ms
+Execution 9 - QUIC Single
+Handshake duration: 425.44 ms
+Execution 10 - QUIC Single
+Handshake duration: 423.71 ms
+Execution 11 - QUIC Single
+Handshake duration: 426.00 ms
+Execution 12 - QUIC Single
+Handshake duration: 424.13 ms
+Execution 13 - QUIC Single
+Handshake duration: 427.25 ms
+Execution 14 - QUIC Single
+Handshake duration: 457.33 ms
+Execution 15 - QUIC Single
+Handshake duration: 433.82 ms
+Execution 16 - QUIC Single
+Handshake duration: 428.68 ms
+Execution 17 - QUIC Single
+Handshake duration: 435.23 ms
+Execution 18 - QUIC Single
+Handshake duration: 447.08 ms
+Execution 19 - QUIC Single
+Handshake duration: 425.78 ms
+Execution 20 - QUIC Single
+Handshake duration: 478.20 ms
+Execution 21 - QUIC Single
+Handshake duration: 438.49 ms
+Execution 22 - QUIC Single
+Handshake duration: 427.02 ms
+Execution 23 - QUIC Single
+Handshake duration: 422.38 ms
+Execution 24 - QUIC Single
+Handshake duration: 473.75 ms
+Execution 25 - QUIC Single
+Handshake duration: 427.46 ms
+Execution 26 - QUIC Single
+Handshake duration: 429.28 ms
+Execution 27 - QUIC Single
+Handshake duration: 426.83 ms
+Execution 28 - QUIC Single
+Handshake duration: 424.87 ms
+Execution 29 - QUIC Single
+Handshake duration: 422.77 ms
+Execution 30 - QUIC Single
+Handshake duration: 4165.38 ms
+Execution 31 - QUIC Single
+Handshake duration: 423.61 ms
+Execution 32 - QUIC Single
+Handshake duration: 424.89 ms
+Execution 33 - QUIC Single
+Handshake duration: 430.83 ms
+Execution 34 - QUIC Single
+Handshake duration: 455.83 ms
+Execution 35 - QUIC Single
+Handshake duration: 436.38 ms
+Execution 36 - QUIC Single
+Handshake duration: 436.95 ms
+Execution 37 - QUIC Single
+Handshake duration: 451.85 ms
+Execution 38 - QUIC Single
+Handshake duration: 434.49 ms
+Execution 39 - QUIC Single
+Handshake duration: 440.29 ms
+Execution 40 - QUIC Single
+Handshake duration: 430.79 ms
+Execution 41 - QUIC Single
+Handshake duration: 471.09 ms
+Execution 42 - QUIC Single
+Handshake duration: 455.88 ms
+Execution 43 - QUIC Single
+Handshake duration: 426.58 ms
+Execution 44 - QUIC Single
+Handshake duration: 425.26 ms
+Execution 45 - QUIC Single
+Handshake duration: 438.50 ms
+Execution 46 - QUIC Single
+Handshake duration: 428.21 ms
+Execution 47 - QUIC Single
+Handshake duration: 430.77 ms
+Execution 48 - QUIC Single
+Handshake duration: 426.23 ms
+Execution 49 - QUIC Single
+Handshake duration: 431.76 ms
+Execution 50 - QUIC Single
+Handshake duration: 444.49 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p256_hqc128
+
+    Executing docker Server...
+serveur
+client
+0533a90364ab264c1b571dd64a1c8c471c602198d842ef2f53c9d20b4b22470a
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+2a25500d63dc0300683a317a0a68dd9917d56899f0c8034d05af6c98d5bddeaf
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e88: root refcnt 7 limit 1000 delay 200ms loss 4% seed 6408477950985230053
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=p256_hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 681.07 ms
+Execution 2 - QUIC Single
+Handshake duration: 446.13 ms
+Execution 3 - QUIC Single
+Handshake duration: 441.50 ms
+Execution 4 - QUIC Single
+Handshake duration: 439.42 ms
+Execution 5 - QUIC Single
+Handshake duration: 440.45 ms
+Execution 6 - QUIC Single
+Handshake duration: 3100.71 ms
+Execution 7 - QUIC Single
+Handshake duration: 442.00 ms
+Execution 8 - QUIC Single
+Handshake duration: 473.53 ms
+Execution 9 - QUIC Single
+Handshake duration: 488.01 ms
+Execution 10 - QUIC Single
+Handshake duration: 436.17 ms
+Execution 11 - QUIC Single
+Handshake duration: 447.25 ms
+Execution 12 - QUIC Single
+Handshake duration: 430.83 ms
+Execution 13 - QUIC Single
+Handshake duration: 442.03 ms
+Execution 14 - QUIC Single
+Handshake duration: 446.85 ms
+Execution 15 - QUIC Single
+Handshake duration: 436.50 ms
+Execution 16 - QUIC Single
+Handshake duration: 445.78 ms
+Execution 17 - QUIC Single
+Handshake duration: 475.26 ms
+Execution 18 - QUIC Single
+Handshake duration: 451.31 ms
+Execution 19 - QUIC Single
+Handshake duration: 442.49 ms
+Execution 20 - QUIC Single
+Handshake duration: 449.12 ms
+Execution 21 - QUIC Single
+Handshake duration: 2851.58 ms
+Execution 22 - QUIC Single
+Handshake duration: 436.80 ms
+Execution 23 - QUIC Single
+Handshake duration: 471.10 ms
+Execution 24 - QUIC Single
+Handshake duration: 448.54 ms
+Execution 25 - QUIC Single
+Handshake duration: 487.07 ms
+Execution 26 - QUIC Single
+Handshake duration: 453.40 ms
+Execution 27 - QUIC Single
+Handshake duration: 436.81 ms
+Execution 28 - QUIC Single
+Handshake duration: 435.05 ms
+Execution 29 - QUIC Single
+Handshake duration: 463.89 ms
+Execution 30 - QUIC Single
+Handshake duration: 437.74 ms
+Execution 31 - QUIC Single
+Handshake duration: 447.99 ms
+Execution 32 - QUIC Single
+Handshake duration: 456.90 ms
+Execution 33 - QUIC Single
+Handshake duration: 464.32 ms
+Execution 34 - QUIC Single
+Handshake duration: 473.33 ms
+Execution 35 - QUIC Single
+Handshake duration: 460.46 ms
+Execution 36 - QUIC Single
+Handshake duration: 3639.55 ms
+Execution 37 - QUIC Single
+Handshake duration: 442.40 ms
+Execution 38 - QUIC Single
+Handshake duration: 499.29 ms
+Execution 39 - QUIC Single
+Handshake duration: 486.51 ms
+Execution 40 - QUIC Single
+Handshake duration: 431.56 ms
+Execution 41 - QUIC Single
+Handshake duration: 478.91 ms
+Execution 42 - QUIC Single
+Handshake duration: 428.85 ms
+Execution 43 - QUIC Single
+Handshake duration: 482.56 ms
+Execution 44 - QUIC Single
+Handshake duration: 431.11 ms
+Execution 45 - QUIC Single
+Handshake duration: 434.60 ms
+Execution 46 - QUIC Single
+Handshake duration: 446.73 ms
+Execution 47 - QUIC Single
+Handshake duration: 501.97 ms
+Execution 48 - QUIC Single
+Handshake duration: 470.33 ms
+Execution 49 - QUIC Single
+Handshake duration: 449.57 ms
+Execution 50 - QUIC Single
+Handshake duration: 465.96 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x25519_hqc128
+
+    Executing docker Server...
+serveur
+client
+b242a5804e668f92d539e84b06a5bc839d763630a87caf2620071dec2224eb0a
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+13be5bf4fbfbdae3e2987e48e4986a3d29735380e400c888e5dc56203a870810
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e8b: root refcnt 7 limit 1000 delay 200ms loss 4% seed 6850607420241210302
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=x25519_hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1885.23 ms
+Execution 2 - QUIC Single
+Handshake duration: 422.30 ms
+Execution 3 - QUIC Single
+Handshake duration: 430.86 ms
+Execution 4 - QUIC Single
+Handshake duration: 444.33 ms
+Execution 5 - QUIC Single
+Handshake duration: 441.85 ms
+Execution 6 - QUIC Single
+Handshake duration: 438.19 ms
+Execution 7 - QUIC Single
+Handshake duration: 446.61 ms
+Execution 8 - QUIC Single
+Handshake duration: 539.96 ms
+Execution 9 - QUIC Single
+Handshake duration: 466.93 ms
+Execution 10 - QUIC Single
+Handshake duration: 2849.58 ms
+Execution 11 - QUIC Single
+Handshake duration: 520.91 ms
+Execution 12 - QUIC Single
+Handshake duration: 438.92 ms
+Execution 13 - QUIC Single
+Handshake duration: 492.33 ms
+Execution 14 - QUIC Single
+Handshake duration: 441.97 ms
+Execution 15 - QUIC Single
+Handshake duration: 457.60 ms
+Execution 16 - QUIC Single
+Handshake duration: 423.76 ms
+Execution 17 - QUIC Single
+Handshake duration: 434.91 ms
+Execution 18 - QUIC Single
+Handshake duration: 426.39 ms
+Execution 19 - QUIC Single
+Handshake duration: 439.42 ms
+Execution 20 - QUIC Single
+Handshake duration: 437.64 ms
+Execution 21 - QUIC Single
+Handshake duration: 2879.98 ms
+Execution 22 - QUIC Single
+Handshake duration: 435.14 ms
+Execution 23 - QUIC Single
+Handshake duration: 453.83 ms
+Execution 24 - QUIC Single
+Handshake duration: 2138.09 ms
+Execution 25 - QUIC Single
+Handshake duration: 482.72 ms
+Execution 26 - QUIC Single
+Handshake duration: 447.14 ms
+Execution 27 - QUIC Single
+Handshake duration: 498.39 ms
+Execution 28 - QUIC Single
+Handshake duration: 429.50 ms
+Execution 29 - QUIC Single
+Handshake duration: 437.11 ms
+Execution 30 - QUIC Single
+Handshake duration: 430.18 ms
+Execution 31 - QUIC Single
+Handshake duration: 424.26 ms
+Execution 32 - QUIC Single
+Handshake duration: 436.77 ms
+Execution 33 - QUIC Single
+Handshake duration: 451.41 ms
+Execution 34 - QUIC Single
+Handshake duration: 445.61 ms
+Execution 35 - QUIC Single
+Handshake duration: 452.27 ms
+Execution 36 - QUIC Single
+Handshake duration: 470.17 ms
+Execution 37 - QUIC Single
+Handshake duration: 2859.45 ms
+Execution 38 - QUIC Single
+Handshake duration: 2870.85 ms
+Execution 39 - QUIC Single
+Handshake duration: 440.08 ms
+Execution 40 - QUIC Single
+Handshake duration: 465.75 ms
+Execution 41 - QUIC Single
+Handshake duration: 433.95 ms
+Execution 42 - QUIC Single
+Handshake duration: 430.07 ms
+Execution 43 - QUIC Single
+Handshake duration: 494.41 ms
+Execution 44 - QUIC Single
+Handshake duration: 437.65 ms
+Execution 45 - QUIC Single
+Handshake duration: 425.33 ms
+Execution 46 - QUIC Single
+Handshake duration: 435.08 ms
+Execution 47 - QUIC Single
+Handshake duration: 437.70 ms
+Execution 48 - QUIC Single
+Handshake duration: 445.52 ms
+Execution 49 - QUIC Single
+Handshake duration: 447.93 ms
+Execution 50 - QUIC Single
+Handshake duration: 430.21 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+ ==> Executing for SIG_ALG: secp384r1
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using ECDSA procedure for secp384r1
+Certificate request self-signature ok
+subject=CN=localhost
+Certificate request self-signature ok
+subject=CN=user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=secp384r1 and certificates created
+
+
+****************
+  -> KEM: P-384
+
+    Executing docker Server...
+serveur
+client
+668834b64e7c79ed3ac84ea1c69f4d4a40f2337e970b8fa1f96f180cdd3137bf
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+d2143b21daf62e146a1c811a3396c4ff1554360f1540aaef6e8af90ccc53efc3
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp384r1 and KEM_ALG=P-384
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 622.49 ms
+Execution 2 - QUIC Single
+Handshake duration: 409.64 ms
+Execution 3 - QUIC Single
+Handshake duration: 410.35 ms
+Execution 4 - QUIC Single
+Handshake duration: 413.93 ms
+Execution 5 - QUIC Single
+Handshake duration: 412.22 ms
+Execution 6 - QUIC Single
+Handshake duration: 419.07 ms
+Execution 7 - QUIC Single
+Handshake duration: 409.18 ms
+Execution 8 - QUIC Single
+Handshake duration: 1415.89 ms
+Execution 9 - QUIC Single
+Handshake duration: 412.13 ms
+Execution 10 - QUIC Single
+Handshake duration: 415.99 ms
+Execution 11 - QUIC Single
+Handshake duration: 410.93 ms
+Execution 12 - QUIC Single
+Handshake duration: 415.71 ms
+Execution 13 - QUIC Single
+Handshake duration: 427.34 ms
+Execution 14 - QUIC Single
+Handshake duration: 420.74 ms
+Execution 15 - QUIC Single
+Handshake duration: 409.78 ms
+Execution 16 - QUIC Single
+Handshake duration: 414.74 ms
+Execution 17 - QUIC Single
+Handshake duration: 423.72 ms
+Execution 18 - QUIC Single
+Handshake duration: 420.41 ms
+Execution 19 - QUIC Single
+Handshake duration: 414.26 ms
+Execution 20 - QUIC Single
+Handshake duration: 408.72 ms
+Execution 21 - QUIC Single
+Handshake duration: 1422.64 ms
+Execution 22 - QUIC Single
+Handshake duration: 411.04 ms
+Execution 23 - QUIC Single
+Handshake duration: 1421.47 ms
+Execution 24 - QUIC Single
+Handshake duration: 409.43 ms
+Execution 25 - QUIC Single
+Handshake duration: 409.68 ms
+Execution 26 - QUIC Single
+Handshake duration: 413.37 ms
+Execution 27 - QUIC Single
+Handshake duration: 418.27 ms
+Execution 28 - QUIC Single
+Handshake duration: 413.16 ms
+Execution 29 - QUIC Single
+Handshake duration: 411.68 ms
+Execution 30 - QUIC Single
+Handshake duration: 416.15 ms
+Execution 31 - QUIC Single
+Handshake duration: 411.18 ms
+Execution 32 - QUIC Single
+Handshake duration: 415.48 ms
+Execution 33 - QUIC Single
+Handshake duration: 411.20 ms
+Execution 34 - QUIC Single
+Handshake duration: 418.56 ms
+Execution 35 - QUIC Single
+Handshake duration: 414.94 ms
+Execution 36 - QUIC Single
+Handshake duration: 426.95 ms
+Execution 37 - QUIC Single
+Handshake duration: 422.00 ms
+Execution 38 - QUIC Single
+Handshake duration: 436.52 ms
+Execution 39 - QUIC Single
+Handshake duration: 444.12 ms
+Execution 40 - QUIC Single
+Handshake duration: 421.71 ms
+Execution 41 - QUIC Single
+Handshake duration: 1418.65 ms
+Execution 42 - QUIC Single
+Handshake duration: 1415.72 ms
+Execution 43 - QUIC Single
+Handshake duration: 1408.37 ms
+Execution 44 - QUIC Single
+Handshake duration: 448.51 ms
+Execution 45 - QUIC Single
+Handshake duration: 413.53 ms
+Execution 46 - QUIC Single
+Handshake duration: 416.68 ms
+Execution 47 - QUIC Single
+Handshake duration: 410.96 ms
+Execution 48 - QUIC Single
+Handshake duration: 411.46 ms
+Execution 49 - QUIC Single
+Handshake duration: 409.34 ms
+Execution 50 - QUIC Single
+Handshake duration: 428.32 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x448
+
+    Executing docker Server...
+serveur
+client
+96383946b8645abbe0bc7df6a9ffb57b4c9e4059cbb8ece787ddc7f17c85fd72
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+c0729b56ff5e52ccf02849c786a2e63b25ea5b6eb302bc673315118283244a5f
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e91: root refcnt 7 limit 1000 delay 200ms loss 4% seed 5005970973663703475
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp384r1 and KEM_ALG=x448
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 811.84 ms
+Execution 2 - QUIC Single
+Handshake duration: 406.82 ms
+Execution 3 - QUIC Single
+Handshake duration: 412.91 ms
+Execution 4 - QUIC Single
+Handshake duration: 411.70 ms
+Execution 5 - QUIC Single
+Handshake duration: 410.84 ms
+Execution 6 - QUIC Single
+Handshake duration: 417.29 ms
+Execution 7 - QUIC Single
+Handshake duration: 417.96 ms
+Execution 8 - QUIC Single
+Handshake duration: 412.04 ms
+Execution 9 - QUIC Single
+Handshake duration: 415.52 ms
+Execution 10 - QUIC Single
+Handshake duration: 406.59 ms
+Execution 11 - QUIC Single
+Handshake duration: 412.12 ms
+Execution 12 - QUIC Single
+Handshake duration: 407.95 ms
+Execution 13 - QUIC Single
+Handshake duration: 424.53 ms
+Execution 14 - QUIC Single
+Handshake duration: 414.28 ms
+Execution 15 - QUIC Single
+Handshake duration: 1421.09 ms
+Execution 16 - QUIC Single
+Handshake duration: 406.77 ms
+Execution 17 - QUIC Single
+Handshake duration: 407.67 ms
+Execution 18 - QUIC Single
+Handshake duration: 420.42 ms
+Execution 19 - QUIC Single
+Handshake duration: 411.81 ms
+Execution 20 - QUIC Single
+Handshake duration: 411.28 ms
+Execution 21 - QUIC Single
+Handshake duration: 412.70 ms
+Execution 22 - QUIC Single
+Handshake duration: 409.04 ms
+Execution 23 - QUIC Single
+Handshake duration: 407.49 ms
+Execution 24 - QUIC Single
+Handshake duration: 407.56 ms
+Execution 25 - QUIC Single
+Handshake duration: 407.44 ms
+Execution 26 - QUIC Single
+Handshake duration: 410.06 ms
+Execution 27 - QUIC Single
+Handshake duration: 414.81 ms
+Execution 28 - QUIC Single
+Handshake duration: 407.60 ms
+Execution 29 - QUIC Single
+Handshake duration: 410.42 ms
+Execution 30 - QUIC Single
+Handshake duration: 413.50 ms
+Execution 31 - QUIC Single
+Handshake duration: 405.92 ms
+Execution 32 - QUIC Single
+Handshake duration: 409.67 ms
+Execution 33 - QUIC Single
+Handshake duration: 406.48 ms
+Execution 34 - QUIC Single
+Handshake duration: 1418.64 ms
+Execution 35 - QUIC Single
+Handshake duration: 406.50 ms
+Execution 36 - QUIC Single
+Handshake duration: 406.79 ms
+Execution 37 - QUIC Single
+Handshake duration: 410.29 ms
+Execution 38 - QUIC Single
+Handshake duration: 410.78 ms
+Execution 39 - QUIC Single
+Handshake duration: 1414.06 ms
+Execution 40 - QUIC Single
+Handshake duration: 406.89 ms
+Execution 41 - QUIC Single
+Handshake duration: 421.50 ms
+Execution 42 - QUIC Single
+Handshake duration: 1408.77 ms
+Execution 43 - QUIC Single
+Handshake duration: 417.20 ms
+Execution 44 - QUIC Single
+Handshake duration: 407.14 ms
+Execution 45 - QUIC Single
+Handshake duration: 409.65 ms
+Execution 46 - QUIC Single
+Handshake duration: 412.13 ms
+Execution 47 - QUIC Single
+Handshake duration: 428.64 ms
+Execution 48 - QUIC Single
+Handshake duration: 421.97 ms
+Execution 49 - QUIC Single
+Handshake duration: 427.56 ms
+Execution 50 - QUIC Single
+Handshake duration: 1426.84 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc192
+
+    Executing docker Server...
+serveur
+client
+99ccac81ec5c405bc46e005b23361408e4cd812ea658e43feef1d85d9157c4ac
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+9441d9aa6ab1503e49e882590c3f8d52e17c6b2706bd28367ce7811d8b0c49f6
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e93: root refcnt 7 limit 1000 delay 200ms loss 4% seed 13782156732261325081
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp384r1 and KEM_ALG=hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 895.33 ms
+Execution 2 - QUIC Single
+Handshake duration: 507.92 ms
+Execution 3 - QUIC Single
+Handshake duration: 469.77 ms
+Execution 4 - QUIC Single
+Handshake duration: 496.62 ms
+Execution 5 - QUIC Single
+Handshake duration: 472.78 ms
+Execution 6 - QUIC Single
+Handshake duration: 468.03 ms
+Execution 7 - QUIC Single
+Handshake duration: 471.89 ms
+Execution 8 - QUIC Single
+Handshake duration: 472.16 ms
+Execution 9 - QUIC Single
+Handshake duration: 1939.52 ms
+Execution 10 - QUIC Single
+Handshake duration: 502.13 ms
+Execution 11 - QUIC Single
+Handshake duration: 469.73 ms
+Execution 12 - QUIC Single
+Handshake duration: 539.15 ms
+Execution 13 - QUIC Single
+Handshake duration: 466.57 ms
+Execution 14 - QUIC Single
+Handshake duration: 575.63 ms
+Execution 15 - QUIC Single
+Handshake duration: 467.29 ms
+Execution 16 - QUIC Single
+Handshake duration: 472.00 ms
+Execution 17 - QUIC Single
+Handshake duration: 2611.56 ms
+Execution 18 - QUIC Single
+Handshake duration: 483.09 ms
+Execution 19 - QUIC Single
+Handshake duration: 581.19 ms
+Execution 20 - QUIC Single
+Handshake duration: 501.63 ms
+Execution 21 - QUIC Single
+Handshake duration: 492.87 ms
+Execution 22 - QUIC Single
+Handshake duration: 2612.53 ms
+Execution 23 - QUIC Single
+Handshake duration: 476.38 ms
+Execution 24 - QUIC Single
+Handshake duration: 471.43 ms
+Execution 25 - QUIC Single
+Handshake duration: 469.28 ms
+Execution 26 - QUIC Single
+Handshake duration: 455.79 ms
+Execution 27 - QUIC Single
+Handshake duration: 499.04 ms
+Execution 28 - QUIC Single
+Handshake duration: 4671.25 ms
+Execution 29 - QUIC Single
+Handshake duration: 465.41 ms
+Execution 30 - QUIC Single
+Handshake duration: 472.45 ms
+Execution 31 - QUIC Single
+Handshake duration: 474.31 ms
+Execution 32 - QUIC Single
+Handshake duration: 472.31 ms
+Execution 33 - QUIC Single
+Handshake duration: 468.15 ms
+Execution 34 - QUIC Single
+Handshake duration: 498.80 ms
+Execution 35 - QUIC Single
+Handshake duration: 588.96 ms
+Execution 36 - QUIC Single
+Handshake duration: 465.35 ms
+Execution 37 - QUIC Single
+Handshake duration: 524.20 ms
+Execution 38 - QUIC Single
+Handshake duration: 475.56 ms
+Execution 39 - QUIC Single
+Handshake duration: 499.41 ms
+Execution 40 - QUIC Single
+Handshake duration: 458.37 ms
+Execution 41 - QUIC Single
+Handshake duration: 563.71 ms
+Execution 42 - QUIC Single
+Handshake duration: 499.05 ms
+Execution 43 - QUIC Single
+Handshake duration: 476.68 ms
+Execution 44 - QUIC Single
+Handshake duration: 3832.36 ms
+Execution 45 - QUIC Single
+Handshake duration: 458.48 ms
+Execution 46 - QUIC Single
+Handshake duration: 486.62 ms
+Execution 47 - QUIC Single
+Handshake duration: 1871.74 ms
+Execution 48 - QUIC Single
+Handshake duration: 476.05 ms
+Execution 49 - QUIC Single
+Handshake duration: 461.35 ms
+Execution 50 - QUIC Single
+Handshake duration: 484.01 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p384_hqc192
+
+    Executing docker Server...
+serveur
+client
+a04cd5a181c8bd8f92024279c4f1cdaf5b33495c04d1db393c7fce521b8613a0
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+ee3d46d4913a8a68df7ce41d2e8079ab75e439595e756abf34a183aff158adaa
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e95: root refcnt 7 limit 1000 delay 200ms loss 4% seed 11579321971705979887
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp384r1 and KEM_ALG=p384_hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 925.37 ms
+Execution 2 - QUIC Single
+Handshake duration: 475.46 ms
+Execution 3 - QUIC Single
+Handshake duration: 510.04 ms
+Execution 4 - QUIC Single
+Handshake duration: 1928.89 ms
+Execution 5 - QUIC Single
+Handshake duration: 506.14 ms
+Execution 6 - QUIC Single
+Handshake duration: 536.03 ms
+Execution 7 - QUIC Single
+Handshake duration: 515.25 ms
+Execution 8 - QUIC Single
+Handshake duration: 487.16 ms
+Execution 9 - QUIC Single
+Handshake duration: 477.98 ms
+Execution 10 - QUIC Single
+Handshake duration: 475.14 ms
+Execution 11 - QUIC Single
+Handshake duration: 473.91 ms
+Execution 12 - QUIC Single
+Handshake duration: 491.67 ms
+Execution 13 - QUIC Single
+Handshake duration: 1889.46 ms
+Execution 14 - QUIC Single
+Handshake duration: 510.77 ms
+Execution 15 - QUIC Single
+Handshake duration: 489.43 ms
+Execution 16 - QUIC Single
+Handshake duration: 479.22 ms
+Execution 17 - QUIC Single
+Handshake duration: 479.06 ms
+Execution 18 - QUIC Single
+Handshake duration: 568.68 ms
+Execution 19 - QUIC Single
+Handshake duration: 482.79 ms
+Execution 20 - QUIC Single
+Handshake duration: 491.14 ms
+Execution 21 - QUIC Single
+Handshake duration: 493.97 ms
+Execution 22 - QUIC Single
+Handshake duration: 504.10 ms
+Execution 23 - QUIC Single
+Handshake duration: 542.49 ms
+Execution 24 - QUIC Single
+Handshake duration: 493.10 ms
+Execution 25 - QUIC Single
+Handshake duration: 522.36 ms
+Execution 26 - QUIC Single
+Handshake duration: 508.98 ms
+Execution 27 - QUIC Single
+Handshake duration: 493.37 ms
+Execution 28 - QUIC Single
+Handshake duration: 686.84 ms
+Execution 29 - QUIC Single
+Handshake duration: 558.13 ms
+Execution 30 - QUIC Single
+Handshake duration: 650.63 ms
+Execution 31 - QUIC Single
+Handshake duration: 477.45 ms
+Execution 32 - QUIC Single
+Handshake duration: 522.38 ms
+Execution 33 - QUIC Single
+Handshake duration: 558.80 ms
+Execution 34 - QUIC Single
+Handshake duration: 488.82 ms
+Execution 35 - QUIC Single
+Handshake duration: 498.16 ms
+Execution 36 - QUIC Single
+Handshake duration: 543.95 ms
+Execution 37 - QUIC Single
+Handshake duration: 502.80 ms
+Execution 38 - QUIC Single
+Handshake duration: 533.23 ms
+Execution 39 - QUIC Single
+Handshake duration: 472.58 ms
+Execution 40 - QUIC Single
+Handshake duration: 502.43 ms
+Execution 41 - QUIC Single
+Handshake duration: 485.03 ms
+Execution 42 - QUIC Single
+Handshake duration: 518.33 ms
+Execution 43 - QUIC Single
+Handshake duration: 475.68 ms
+Execution 44 - QUIC Single
+Handshake duration: 521.31 ms
+Execution 45 - QUIC Single
+Handshake duration: 550.17 ms
+Execution 46 - QUIC Single
+Handshake duration: 500.80 ms
+Execution 47 - QUIC Single
+Handshake duration: 639.96 ms
+Execution 48 - QUIC Single
+Handshake duration: 512.34 ms
+Execution 49 - QUIC Single
+Handshake duration: 520.07 ms
+Execution 50 - QUIC Single
+Handshake duration: 502.64 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x448_hqc192
+
+    Executing docker Server...
+serveur
+client
+bcd7f69de54b33fcfdb86f847dedc87d2fada0d635abd80c97d8bbbde1c040b7
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+4a031a7b81ea727f1278b9604525c28f86744faff34ffa0792ffc4fcfe9a32fd
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e97: root refcnt 7 limit 1000 delay 200ms loss 4% seed 8604750784891464803
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp384r1 and KEM_ALG=x448_hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 693.28 ms
+Execution 2 - QUIC Single
+Handshake duration: 463.78 ms
+Execution 3 - QUIC Single
+Handshake duration: 471.40 ms
+Execution 4 - QUIC Single
+Handshake duration: 486.59 ms
+Execution 5 - QUIC Single
+Handshake duration: 464.70 ms
+Execution 6 - QUIC Single
+Handshake duration: 472.70 ms
+Execution 7 - QUIC Single
+Handshake duration: 468.41 ms
+Execution 8 - QUIC Single
+Handshake duration: 554.11 ms
+Execution 9 - QUIC Single
+Handshake duration: 516.14 ms
+Execution 10 - QUIC Single
+Handshake duration: 494.08 ms
+Execution 11 - QUIC Single
+Handshake duration: 485.16 ms
+Execution 12 - QUIC Single
+Handshake duration: 489.40 ms
+Execution 13 - QUIC Single
+Handshake duration: 536.61 ms
+Execution 14 - QUIC Single
+Handshake duration: 463.29 ms
+Execution 15 - QUIC Single
+Handshake duration: 501.54 ms
+Execution 16 - QUIC Single
+Handshake duration: 481.64 ms
+Execution 17 - QUIC Single
+Handshake duration: 491.76 ms
+Execution 18 - QUIC Single
+Handshake duration: 493.70 ms
+Execution 19 - QUIC Single
+Handshake duration: 528.00 ms
+Execution 20 - QUIC Single
+Handshake duration: 494.42 ms
+Execution 21 - QUIC Single
+Handshake duration: 504.10 ms
+Execution 22 - QUIC Single
+Handshake duration: 524.04 ms
+Execution 23 - QUIC Single
+Handshake duration: 493.12 ms
+Execution 24 - QUIC Single
+Handshake duration: 472.48 ms
+Execution 25 - QUIC Single
+Handshake duration: 471.10 ms
+Execution 26 - QUIC Single
+Handshake duration: 475.11 ms
+Execution 27 - QUIC Single
+Handshake duration: 481.71 ms
+Execution 28 - QUIC Single
+Handshake duration: 463.88 ms
+Execution 29 - QUIC Single
+Handshake duration: 469.74 ms
+Execution 30 - QUIC Single
+Handshake duration: 470.02 ms
+Execution 31 - QUIC Single
+Handshake duration: 467.42 ms
+Execution 32 - QUIC Single
+Handshake duration: 491.80 ms
+Execution 33 - QUIC Single
+Handshake duration: 1875.66 ms
+Execution 34 - QUIC Single
+Handshake duration: 478.06 ms
+Execution 35 - QUIC Single
+Handshake duration: 555.17 ms
+Execution 36 - QUIC Single
+Handshake duration: 478.50 ms
+Execution 37 - QUIC Single
+Handshake duration: 480.59 ms
+Execution 38 - QUIC Single
+Handshake duration: 470.59 ms
+Execution 39 - QUIC Single
+Handshake duration: 476.96 ms
+Execution 40 - QUIC Single
+Handshake duration: 481.65 ms
+Execution 41 - QUIC Single
+Handshake duration: 1866.52 ms
+Execution 42 - QUIC Single
+Handshake duration: 464.42 ms
+Execution 43 - QUIC Single
+Handshake duration: 472.94 ms
+Execution 44 - QUIC Single
+Handshake duration: 485.85 ms
+Execution 45 - QUIC Single
+Handshake duration: 470.54 ms
+Execution 46 - QUIC Single
+Handshake duration: 472.52 ms
+Execution 47 - QUIC Single
+Handshake duration: 472.58 ms
+Execution 48 - QUIC Single
+Handshake duration: 471.10 ms
+Execution 49 - QUIC Single
+Handshake duration: 2643.99 ms
+Execution 50 - QUIC Single
+Handshake duration: 477.18 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+ ==> Executing for SIG_ALG: secp521r1
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using ECDSA procedure for secp521r1
+Certificate request self-signature ok
+subject=CN=localhost
+Certificate request self-signature ok
+subject=CN=user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=secp521r1 and certificates created
+
+
+****************
+  -> KEM: P-521
+
+    Executing docker Server...
+serveur
+client
+cafa65d5cb2322bd3cd63fb14ee03b6b5d9849707aabfe22fde87e5db1ccc602
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+b7c268f55cbc98973c0e7e8a72fe04660f20d47d210379a18a69749822f5e55a
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e9a: root refcnt 7 limit 1000 delay 200ms loss 4% seed 4577181279380318290
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp521r1 and KEM_ALG=P-521
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 816.92 ms
+Execution 2 - QUIC Single
+Handshake duration: 410.52 ms
+Execution 3 - QUIC Single
+Handshake duration: 413.71 ms
+Execution 4 - QUIC Single
+Handshake duration: 563.64 ms
+Execution 5 - QUIC Single
+Handshake duration: 1448.64 ms
+Execution 6 - QUIC Single
+Handshake duration: 417.33 ms
+Execution 7 - QUIC Single
+Handshake duration: 442.34 ms
+Execution 8 - QUIC Single
+Handshake duration: 427.94 ms
+Execution 9 - QUIC Single
+Handshake duration: 408.89 ms
+Execution 10 - QUIC Single
+Handshake duration: 411.21 ms
+Execution 11 - QUIC Single
+Handshake duration: 410.11 ms
+Execution 12 - QUIC Single
+Handshake duration: 408.15 ms
+Execution 13 - QUIC Single
+Handshake duration: 410.01 ms
+Execution 14 - QUIC Single
+Handshake duration: 415.79 ms
+Execution 15 - QUIC Single
+Handshake duration: 411.14 ms
+Execution 16 - QUIC Single
+Handshake duration: 434.04 ms
+Execution 17 - QUIC Single
+Handshake duration: 407.79 ms
+Execution 18 - QUIC Single
+Handshake duration: 409.90 ms
+Execution 19 - QUIC Single
+Handshake duration: 424.32 ms
+Execution 20 - QUIC Single
+Handshake duration: 435.76 ms
+Execution 21 - QUIC Single
+Handshake duration: 421.45 ms
+Execution 22 - QUIC Single
+Handshake duration: 410.35 ms
+Execution 23 - QUIC Single
+Handshake duration: 412.42 ms
+Execution 24 - QUIC Single
+Handshake duration: 412.56 ms
+Execution 25 - QUIC Single
+Handshake duration: 407.46 ms
+Execution 26 - QUIC Single
+Handshake duration: 1409.24 ms
+Execution 27 - QUIC Single
+Handshake duration: 409.72 ms
+Execution 28 - QUIC Single
+Handshake duration: 433.08 ms
+Execution 29 - QUIC Single
+Handshake duration: 409.59 ms
+Execution 30 - QUIC Single
+Handshake duration: 412.82 ms
+Execution 31 - QUIC Single
+Handshake duration: 409.91 ms
+Execution 32 - QUIC Single
+Handshake duration: 408.09 ms
+Execution 33 - QUIC Single
+Handshake duration: 415.86 ms
+Execution 34 - QUIC Single
+Handshake duration: 419.62 ms
+Execution 35 - QUIC Single
+Handshake duration: 409.49 ms
+Execution 36 - QUIC Single
+Handshake duration: 410.71 ms
+Execution 37 - QUIC Single
+Handshake duration: 414.49 ms
+Execution 38 - QUIC Single
+Handshake duration: 407.84 ms
+Execution 39 - QUIC Single
+Handshake duration: 413.57 ms
+Execution 40 - QUIC Single
+Handshake duration: 407.62 ms
+Execution 41 - QUIC Single
+Handshake duration: 418.78 ms
+Execution 42 - QUIC Single
+Handshake duration: 407.12 ms
+Execution 43 - QUIC Single
+Handshake duration: 412.55 ms
+Execution 44 - QUIC Single
+Handshake duration: 409.58 ms
+Execution 45 - QUIC Single
+Handshake duration: 411.65 ms
+Execution 46 - QUIC Single
+Handshake duration: 419.32 ms
+Execution 47 - QUIC Single
+Handshake duration: 407.92 ms
+Execution 48 - QUIC Single
+Handshake duration: 409.75 ms
+Execution 49 - QUIC Single
+Handshake duration: 413.17 ms
+Execution 50 - QUIC Single
+Handshake duration: 408.07 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc256
+
+    Executing docker Server...
+serveur
+client
+7fbf9144befab9c6c886d01144993a6e597dfb7be17133004469e8905a40fa0b
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+ee9420c05c8df46d696eae3fb6dcacff7b9be196b2dfe63de86c368ed992c7df
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp521r1 and KEM_ALG=hqc256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 2192.49 ms
+Execution 2 - QUIC Single
+Handshake duration: 1951.47 ms
+Execution 3 - QUIC Single
+Handshake duration: 1792.05 ms
+Execution 4 - QUIC Single
+Handshake duration: 2002.94 ms
+Execution 5 - QUIC Single
+Handshake duration: 1956.06 ms
+Execution 6 - QUIC Single
+Handshake duration: 1973.04 ms
+Execution 7 - QUIC Single
+Handshake duration: 3360.39 ms
+Execution 8 - QUIC Single
+Handshake duration: 1967.89 ms
+Execution 9 - QUIC Single
+Handshake duration: 1945.47 ms
+Execution 10 - QUIC Single
+Handshake duration: 1939.32 ms
+Execution 11 - QUIC Single
+Handshake duration: 1990.02 ms
+Execution 12 - QUIC Single
+Handshake duration: 2945.93 ms
+Execution 13 - QUIC Single
+Handshake duration: 2548.61 ms
+Execution 14 - QUIC Single
+Handshake duration: 2948.18 ms
+Execution 15 - QUIC Single
+Handshake duration: 1955.58 ms
+Execution 16 - QUIC Single
+Handshake duration: 2027.96 ms
+Execution 17 - QUIC Single
+Handshake duration: 4513.87 ms
+Execution 18 - QUIC Single
+Handshake duration: 1781.12 ms
+Execution 19 - QUIC Single
+Handshake duration: 1979.70 ms
+Execution 20 - QUIC Single
+Handshake duration: 1963.10 ms
+Execution 21 - QUIC Single
+Handshake duration: 1978.59 ms
+Execution 22 - QUIC Single
+Handshake duration: 1791.51 ms
+Execution 23 - QUIC Single
+Handshake duration: 2979.57 ms
+Execution 24 - QUIC Single
+Handshake duration: 1961.08 ms
+Execution 25 - QUIC Single
+Handshake duration: 2973.14 ms
+Execution 26 - QUIC Single
+Handshake duration: 2791.79 ms
+Execution 27 - QUIC Single
+Handshake duration: 2961.43 ms
+Execution 28 - QUIC Single
+Handshake duration: 2002.25 ms
+Execution 29 - QUIC Single
+Handshake duration: 1947.35 ms
+Execution 30 - QUIC Single
+Handshake duration: 2059.12 ms
+Execution 31 - QUIC Single
+Handshake duration: 1943.08 ms
+Execution 32 - QUIC Single
+Handshake duration: 1970.48 ms
+Execution 33 - QUIC Single
+Handshake duration: 1973.51 ms
+Execution 34 - QUIC Single
+Handshake duration: 3371.95 ms
+Execution 35 - QUIC Single
+Handshake duration: 2639.39 ms
+Execution 36 - QUIC Single
+Handshake duration: 2074.80 ms
+Execution 37 - QUIC Single
+Handshake duration: 1979.96 ms
+Execution 38 - QUIC Single
+Handshake duration: 1773.35 ms
+Execution 39 - QUIC Single
+Handshake duration: 1945.52 ms
+Execution 40 - QUIC Single
+Handshake duration: 3376.76 ms
+Execution 41 - QUIC Single
+Handshake duration: 2000.64 ms
+Execution 42 - QUIC Single
+Handshake duration: 1969.02 ms
+Execution 43 - QUIC Single
+Handshake duration: 1960.69 ms
+Execution 44 - QUIC Single
+Handshake duration: 2001.95 ms
+Execution 45 - QUIC Single
+Handshake duration: 2983.55 ms
+Execution 46 - QUIC Single
+Handshake duration: 2564.40 ms
+Execution 47 - QUIC Single
+Handshake duration: 1944.37 ms
+Execution 48 - QUIC Single
+Handshake duration: 1778.62 ms
+Execution 49 - QUIC Single
+Handshake duration: 1968.52 ms
+Execution 50 - QUIC Single
+Handshake duration: 2189.86 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p521_hqc256
+
+    Executing docker Server...
+serveur
+client
+d3d2c7a395f70fc49b40bf8854268de494392a146b69d1a939d784da9cf56eae
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+d36db6cdfa14d2b13d81342eec96c85ffa879278ee9b5bd273889a3056d869d3
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e9f: root refcnt 7 limit 1000 delay 200ms loss 4% seed 9406766465358876590
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=secp521r1 and KEM_ALG=p521_hqc256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 2512.99 ms
+Execution 2 - QUIC Single
+Handshake duration: 2263.52 ms
+Execution 3 - QUIC Single
+Handshake duration: 2791.89 ms
+Execution 4 - QUIC Single
+Handshake duration: 2007.32 ms
+Execution 5 - QUIC Single
+Handshake duration: 2209.65 ms
+Execution 6 - QUIC Single
+Handshake duration: 2003.60 ms
+Execution 7 - QUIC Single
+Handshake duration: 2028.03 ms
+Execution 8 - QUIC Single
+Handshake duration: 2079.08 ms
+Execution 9 - QUIC Single
+Handshake duration: 1820.78 ms
+Execution 10 - QUIC Single
+Handshake duration: 1970.30 ms
+Execution 11 - QUIC Single
+Handshake duration: 1975.73 ms
+Execution 12 - QUIC Single
+Handshake duration: 2316.43 ms
+Execution 13 - QUIC Single
+Handshake duration: 3031.84 ms
+Execution 14 - QUIC Single
+Handshake duration: 2010.21 ms
+Execution 15 - QUIC Single
+Handshake duration: 2625.05 ms
+Execution 16 - QUIC Single
+Handshake duration: 2978.26 ms
+Execution 17 - QUIC Single
+Handshake duration: 2031.88 ms
+Execution 18 - QUIC Single
+Handshake duration: 1971.83 ms
+Execution 19 - QUIC Single
+Handshake duration: 1979.72 ms
+Execution 20 - QUIC Single
+Handshake duration: 1976.46 ms
+Execution 21 - QUIC Single
+Handshake duration: 1804.05 ms
+Execution 22 - QUIC Single
+Handshake duration: 3059.49 ms
+Execution 23 - QUIC Single
+Handshake duration: 2004.48 ms
+Execution 24 - QUIC Single
+Handshake duration: 3454.82 ms
+Execution 25 - QUIC Single
+Handshake duration: 2725.40 ms
+Execution 26 - QUIC Single
+Handshake duration: 2136.55 ms
+Execution 27 - QUIC Single
+Handshake duration: 1980.56 ms
+Execution 28 - QUIC Single
+Handshake duration: 1984.55 ms
+Execution 29 - QUIC Single
+Handshake duration: 1980.69 ms
+Execution 30 - QUIC Single
+Handshake duration: 1970.49 ms
+Execution 31 - QUIC Single
+Handshake duration: 1977.29 ms
+Execution 32 - QUIC Single
+Handshake duration: 2001.02 ms
+Execution 33 - QUIC Single
+Handshake duration: 2008.55 ms
+Execution 34 - QUIC Single
+Handshake duration: 2110.87 ms
+Execution 35 - QUIC Single
+Handshake duration: 2945.40 ms
+Execution 36 - QUIC Single
+Handshake duration: 2781.22 ms
+Execution 37 - QUIC Single
+Handshake duration: 1975.60 ms
+Execution 38 - QUIC Single
+Handshake duration: 2010.87 ms
+Execution 39 - QUIC Single
+Handshake duration: 4093.28 ms
+Execution 40 - QUIC Single
+Handshake duration: 1949.18 ms
+Execution 41 - QUIC Single
+Handshake duration: 2561.07 ms
+Execution 42 - QUIC Single
+Handshake duration: 1953.17 ms
+Execution 43 - QUIC Single
+Handshake duration: 3013.53 ms
+Execution 44 - QUIC Single
+Handshake duration: 2015.83 ms
+Execution 45 - QUIC Single
+Handshake duration: 2050.00 ms
+Execution 46 - QUIC Single
+Handshake duration: 2044.93 ms
+Execution 47 - QUIC Single
+Handshake duration: 1879.29 ms
+Execution 48 - QUIC Single
+Handshake duration: 2751.25 ms
+Execution 49 - QUIC Single
+Handshake duration: 4502.08 ms
+Execution 50 - QUIC Single
+Handshake duration: 3050.24 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+ ==> Executing for SIG_ALG: mldsa44
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for mldsa44
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=mldsa44 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Executing docker Server...
+serveur
+client
+06927b5f349f31cbf7cf9a954fd8a584dc42a458f6cbf195bcfd5395546d75da
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+3aa6f99bb97e4472408a1a3f161556ce70dcacb97227fc97fa7ec60a4c26ad19
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc noqueue 0: root refcnt 2 
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa44 and KEM_ALG=P-256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1011.61 ms
+Execution 2 - QUIC Single
+Handshake duration: 806.24 ms
+Execution 3 - QUIC Single
+Handshake duration: 2252.36 ms
+Execution 4 - QUIC Single
+Handshake duration: 808.67 ms
+Execution 5 - QUIC Single
+Handshake duration: 806.57 ms
+Execution 6 - QUIC Single
+Handshake duration: 807.31 ms
+Execution 7 - QUIC Single
+Handshake duration: 813.81 ms
+Execution 8 - QUIC Single
+Handshake duration: 823.59 ms
+Execution 9 - QUIC Single
+Handshake duration: 805.28 ms
+Execution 10 - QUIC Single
+Handshake duration: 2236.45 ms
+Execution 11 - QUIC Single
+Handshake duration: 809.68 ms
+Execution 12 - QUIC Single
+Handshake duration: 808.48 ms
+Execution 13 - QUIC Single
+Handshake duration: 2804.70 ms
+Execution 14 - QUIC Single
+Handshake duration: 1613.69 ms
+Execution 15 - QUIC Single
+Handshake duration: 804.54 ms
+Execution 16 - QUIC Single
+Handshake duration: 815.39 ms
+Execution 17 - QUIC Single
+Handshake duration: 807.09 ms
+Execution 18 - QUIC Single
+Handshake duration: 809.40 ms
+Execution 19 - QUIC Single
+Handshake duration: 814.27 ms
+Execution 20 - QUIC Single
+Handshake duration: 806.60 ms
+Execution 21 - QUIC Single
+Handshake duration: 805.85 ms
+Execution 22 - QUIC Single
+Handshake duration: 805.40 ms
+Execution 23 - QUIC Single
+Handshake duration: 1612.78 ms
+Execution 24 - QUIC Single
+Handshake duration: 1808.22 ms
+Execution 25 - QUIC Single
+Handshake duration: 805.95 ms
+Execution 26 - QUIC Single
+Handshake duration: 3145.66 ms
+Execution 27 - QUIC Single
+Handshake duration: 808.66 ms
+Execution 28 - QUIC Single
+Handshake duration: 805.98 ms
+Execution 29 - QUIC Single
+Handshake duration: 811.33 ms
+Execution 30 - QUIC Single
+Handshake duration: 806.54 ms
+Execution 31 - QUIC Single
+Handshake duration: 807.45 ms
+Execution 32 - QUIC Single
+Handshake duration: 807.21 ms
+Execution 33 - QUIC Single
+Handshake duration: 2806.09 ms
+Execution 34 - QUIC Single
+Handshake duration: 821.48 ms
+Execution 35 - QUIC Single
+Handshake duration: 2811.78 ms
+Execution 36 - QUIC Single
+Handshake duration: 809.43 ms
+Execution 37 - QUIC Single
+Handshake duration: 805.22 ms
+Execution 38 - QUIC Single
+Handshake duration: 810.49 ms
+Execution 39 - QUIC Single
+Handshake duration: 806.47 ms
+Execution 40 - QUIC Single
+Handshake duration: 807.02 ms
+Execution 41 - QUIC Single
+Handshake duration: 809.32 ms
+Execution 42 - QUIC Single
+Handshake duration: 805.47 ms
+Execution 43 - QUIC Single
+Handshake duration: 807.08 ms
+Execution 44 - QUIC Single
+Handshake duration: 805.49 ms
+Execution 45 - QUIC Single
+Handshake duration: 812.33 ms
+Execution 46 - QUIC Single
+Handshake duration: 806.72 ms
+Execution 47 - QUIC Single
+Handshake duration: 827.56 ms
+Execution 48 - QUIC Single
+Handshake duration: 824.49 ms
+Execution 49 - QUIC Single
+Handshake duration: 812.22 ms
+Execution 50 - QUIC Single
+Handshake duration: 805.53 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x25519
+
+    Executing docker Server...
+serveur
+client
+bcdf33b70a0f1d193cf9850c06eb68d4a5e20afdf1b53092fe447f72775366d4
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+c90ba614864ce0ab6cce29775fbf1b19f1ec9cbfbcf150dd906af4012e4fd92e
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ea4: root refcnt 7 limit 1000 delay 200ms loss 4% seed 375092192994551731
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa44 and KEM_ALG=x25519
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1212.05 ms
+Execution 2 - QUIC Single
+Handshake duration: 827.47 ms
+Execution 3 - QUIC Single
+Handshake duration: 809.54 ms
+Execution 4 - QUIC Single
+Handshake duration: 823.26 ms
+Execution 5 - QUIC Single
+Handshake duration: 824.19 ms
+Execution 6 - QUIC Single
+Handshake duration: 805.82 ms
+Execution 7 - QUIC Single
+Handshake duration: 812.41 ms
+Execution 8 - QUIC Single
+Handshake duration: 810.00 ms
+Execution 9 - QUIC Single
+Handshake duration: 804.80 ms
+Execution 10 - QUIC Single
+Handshake duration: 810.89 ms
+Execution 11 - QUIC Single
+Handshake duration: 806.99 ms
+Execution 12 - QUIC Single
+Handshake duration: 809.65 ms
+Execution 13 - QUIC Single
+Handshake duration: 811.07 ms
+Execution 14 - QUIC Single
+Handshake duration: 820.80 ms
+Execution 15 - QUIC Single
+Handshake duration: 845.37 ms
+Execution 16 - QUIC Single
+Handshake duration: 814.11 ms
+Execution 17 - QUIC Single
+Handshake duration: 805.33 ms
+Execution 18 - QUIC Single
+Handshake duration: 811.61 ms
+Execution 19 - QUIC Single
+Handshake duration: 3804.23 ms
+Execution 20 - QUIC Single
+Handshake duration: 813.62 ms
+Execution 21 - QUIC Single
+Handshake duration: 818.33 ms
+Execution 22 - QUIC Single
+Handshake duration: 812.58 ms
+Execution 23 - QUIC Single
+Handshake duration: 817.55 ms
+Execution 24 - QUIC Single
+Handshake duration: 812.60 ms
+Execution 25 - QUIC Single
+Handshake duration: 805.22 ms
+Execution 26 - QUIC Single
+Handshake duration: 809.53 ms
+Execution 27 - QUIC Single
+Handshake duration: 811.72 ms
+Execution 28 - QUIC Single
+Handshake duration: 809.34 ms
+Execution 29 - QUIC Single
+Handshake duration: 804.09 ms
+Execution 30 - QUIC Single
+Handshake duration: 805.50 ms
+Execution 31 - QUIC Single
+Handshake duration: 821.01 ms
+Execution 32 - QUIC Single
+Handshake duration: 810.15 ms
+Execution 33 - QUIC Single
+Handshake duration: 806.26 ms
+Execution 34 - QUIC Single
+Handshake duration: 811.15 ms
+Execution 35 - QUIC Single
+Handshake duration: 822.92 ms
+Execution 36 - QUIC Single
+Handshake duration: 807.99 ms
+Execution 37 - QUIC Single
+Handshake duration: 853.76 ms
+Execution 38 - QUIC Single
+Handshake duration: 806.07 ms
+Execution 39 - QUIC Single
+Handshake duration: 809.13 ms
+Execution 40 - QUIC Single
+Handshake duration: 833.21 ms
+Execution 41 - QUIC Single
+Handshake duration: 824.05 ms
+Execution 42 - QUIC Single
+Handshake duration: 805.56 ms
+Execution 43 - QUIC Single
+Handshake duration: 806.07 ms
+Execution 44 - QUIC Single
+Handshake duration: 806.92 ms
+Execution 45 - QUIC Single
+Handshake duration: 816.75 ms
+Execution 46 - QUIC Single
+Handshake duration: 2806.17 ms
+Execution 47 - QUIC Single
+Handshake duration: 821.72 ms
+Execution 48 - QUIC Single
+Handshake duration: 810.46 ms
+Execution 49 - QUIC Single
+Handshake duration: 807.49 ms
+Execution 50 - QUIC Single
+Handshake duration: 832.09 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc128
+
+    Executing docker Server...
+serveur
+client
+3f14d81801239aa73ba521fe895b42b2fece6ba3de7c848bdabcf3caa4c254d8
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+771dda4121ac9dc69bf847e30d719da8f4043eeecd62a17021193ca4ae9fc4a5
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ea6: root refcnt 7 limit 1000 delay 200ms loss 4% seed 15893742993502178613
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa44 and KEM_ALG=hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 765.27 ms
+Execution 2 - QUIC Single
+Handshake duration: 830.19 ms
+Execution 3 - QUIC Single
+Handshake duration: 848.63 ms
+Execution 4 - QUIC Single
+Handshake duration: 832.72 ms
+Execution 5 - QUIC Single
+Handshake duration: 826.08 ms
+Execution 6 - QUIC Single
+Handshake duration: 827.59 ms
+Execution 7 - QUIC Single
+Handshake duration: 863.18 ms
+Execution 8 - QUIC Single
+Handshake duration: 1875.91 ms
+Execution 9 - QUIC Single
+Handshake duration: 879.95 ms
+Execution 10 - QUIC Single
+Handshake duration: 923.86 ms
+Execution 11 - QUIC Single
+Handshake duration: 846.02 ms
+Execution 12 - QUIC Single
+Handshake duration: 845.42 ms
+Execution 13 - QUIC Single
+Handshake duration: 876.21 ms
+Execution 14 - QUIC Single
+Handshake duration: 885.76 ms
+Execution 15 - QUIC Single
+Handshake duration: 846.80 ms
+Execution 16 - QUIC Single
+Handshake duration: 1941.52 ms
+Execution 17 - QUIC Single
+Handshake duration: 994.59 ms
+Execution 18 - QUIC Single
+Handshake duration: 841.85 ms
+Execution 19 - QUIC Single
+Handshake duration: 829.73 ms
+Execution 20 - QUIC Single
+Handshake duration: 857.13 ms
+Execution 21 - QUIC Single
+Handshake duration: 1616.34 ms
+Execution 22 - QUIC Single
+Handshake duration: 2233.86 ms
+Execution 23 - QUIC Single
+Handshake duration: 831.31 ms
+Execution 24 - QUIC Single
+Handshake duration: 834.80 ms
+Execution 25 - QUIC Single
+Handshake duration: 859.45 ms
+Execution 26 - QUIC Single
+Handshake duration: 828.47 ms
+Execution 27 - QUIC Single
+Handshake duration: 891.77 ms
+Execution 28 - QUIC Single
+Handshake duration: 829.42 ms
+Execution 29 - QUIC Single
+Handshake duration: 865.00 ms
+Execution 30 - QUIC Single
+Handshake duration: 823.12 ms
+Execution 31 - QUIC Single
+Handshake duration: 868.66 ms
+Execution 32 - QUIC Single
+Handshake duration: 841.53 ms
+Execution 33 - QUIC Single
+Handshake duration: 841.93 ms
+Execution 34 - QUIC Single
+Handshake duration: 831.89 ms
+Execution 35 - QUIC Single
+Handshake duration: 846.29 ms
+Execution 36 - QUIC Single
+Handshake duration: 839.53 ms
+Execution 37 - QUIC Single
+Handshake duration: 865.03 ms
+Execution 38 - QUIC Single
+Handshake duration: 889.39 ms
+Execution 39 - QUIC Single
+Handshake duration: 837.74 ms
+Execution 40 - QUIC Single
+Handshake duration: 827.13 ms
+Execution 41 - QUIC Single
+Handshake duration: 821.99 ms
+Execution 42 - QUIC Single
+Handshake duration: 833.03 ms
+Execution 43 - QUIC Single
+Handshake duration: 832.89 ms
+Execution 44 - QUIC Single
+Handshake duration: 826.45 ms
+Execution 45 - QUIC Single
+Handshake duration: 837.58 ms
+Execution 46 - QUIC Single
+Handshake duration: 1626.87 ms
+Execution 47 - QUIC Single
+Handshake duration: 825.95 ms
+Execution 48 - QUIC Single
+Handshake duration: 881.76 ms
+Execution 49 - QUIC Single
+Handshake duration: 869.40 ms
+Execution 50 - QUIC Single
+Handshake duration: 844.33 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p256_hqc128
+
+    Executing docker Server...
+serveur
+client
+f4c6486f9799b22aa60c895940050898b43fb87443918e308ede38b3d5b759fd
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+499d30ed3e3eff3439c971a9f5dc6f3daa89e27af7cf4249dffbf70481708f9c
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ea9: root refcnt 7 limit 1000 delay 200ms loss 4% seed 17316659194158502457
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa44 and KEM_ALG=p256_hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1279.46 ms
+Execution 2 - QUIC Single
+Handshake duration: 867.42 ms
+Execution 3 - QUIC Single
+Handshake duration: 860.21 ms
+Execution 4 - QUIC Single
+Handshake duration: 864.43 ms
+Execution 5 - QUIC Single
+Handshake duration: 1619.96 ms
+Execution 6 - QUIC Single
+Handshake duration: 844.24 ms
+Execution 7 - QUIC Single
+Handshake duration: 1885.25 ms
+Execution 8 - QUIC Single
+Handshake duration: 847.64 ms
+Execution 9 - QUIC Single
+Handshake duration: 852.44 ms
+Execution 10 - QUIC Single
+Handshake duration: 849.90 ms
+Execution 11 - QUIC Single
+Handshake duration: 1615.80 ms
+Execution 12 - QUIC Single
+Handshake duration: 832.67 ms
+Execution 13 - QUIC Single
+Handshake duration: 859.88 ms
+Execution 14 - QUIC Single
+Handshake duration: 842.51 ms
+Execution 15 - QUIC Single
+Handshake duration: 906.88 ms
+Execution 16 - QUIC Single
+Handshake duration: 848.23 ms
+Execution 17 - QUIC Single
+Handshake duration: 892.28 ms
+Execution 18 - QUIC Single
+Handshake duration: 852.20 ms
+Execution 19 - QUIC Single
+Handshake duration: 844.18 ms
+Execution 20 - QUIC Single
+Handshake duration: 885.23 ms
+Execution 21 - QUIC Single
+Handshake duration: 842.12 ms
+Execution 22 - QUIC Single
+Handshake duration: 846.32 ms
+Execution 23 - QUIC Single
+Handshake duration: 907.34 ms
+Execution 24 - QUIC Single
+Handshake duration: 854.83 ms
+Execution 25 - QUIC Single
+Handshake duration: 890.49 ms
+Execution 26 - QUIC Single
+Handshake duration: 834.73 ms
+Execution 27 - QUIC Single
+Handshake duration: 837.82 ms
+Execution 28 - QUIC Single
+Handshake duration: 838.47 ms
+Execution 29 - QUIC Single
+Handshake duration: 837.53 ms
+Execution 30 - QUIC Single
+Handshake duration: 841.14 ms
+Execution 31 - QUIC Single
+Handshake duration: 837.72 ms
+Execution 32 - QUIC Single
+Handshake duration: 834.50 ms
+Execution 33 - QUIC Single
+Handshake duration: 839.40 ms
+Execution 34 - QUIC Single
+Handshake duration: 848.01 ms
+Execution 35 - QUIC Single
+Handshake duration: 919.81 ms
+Execution 36 - QUIC Single
+Handshake duration: 861.31 ms
+Execution 37 - QUIC Single
+Handshake duration: 885.70 ms
+Execution 38 - QUIC Single
+Handshake duration: 900.83 ms
+Execution 39 - QUIC Single
+Handshake duration: 1004.92 ms
+Execution 40 - QUIC Single
+Handshake duration: 872.76 ms
+Execution 41 - QUIC Single
+Handshake duration: 863.13 ms
+Execution 42 - QUIC Single
+Handshake duration: 870.10 ms
+Execution 43 - QUIC Single
+Handshake duration: 846.82 ms
+Execution 44 - QUIC Single
+Handshake duration: 850.31 ms
+Execution 45 - QUIC Single
+Handshake duration: 846.60 ms
+Execution 46 - QUIC Single
+Handshake duration: 860.33 ms
+Execution 47 - QUIC Single
+Handshake duration: 871.02 ms
+Execution 48 - QUIC Single
+Handshake duration: 870.62 ms
+Execution 49 - QUIC Single
+Handshake duration: 853.54 ms
+Execution 50 - QUIC Single
+Handshake duration: 854.55 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x25519_hqc128
+
+    Executing docker Server...
+serveur
+client
+057320445f8fa5ce932010c65c562d367a32fa10912877bd657f124f73a7aaec
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+081b8b285e940588eb04545affca467aec9ab6815ead89bd57332942c1b656b9
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eab: root refcnt 7 limit 1000 delay 200ms loss 4% seed 13878993287999159830
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa44 and KEM_ALG=x25519_hqc128
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1231.04 ms
+Execution 2 - QUIC Single
+Handshake duration: 839.18 ms
+Execution 3 - QUIC Single
+Handshake duration: 828.09 ms
+Execution 4 - QUIC Single
+Handshake duration: 853.21 ms
+Execution 5 - QUIC Single
+Handshake duration: 829.84 ms
+Execution 6 - QUIC Single
+Handshake duration: 829.61 ms
+Execution 7 - QUIC Single
+Handshake duration: 825.46 ms
+Execution 8 - QUIC Single
+Handshake duration: 846.58 ms
+Execution 9 - QUIC Single
+Handshake duration: 2229.46 ms
+Execution 10 - QUIC Single
+Handshake duration: 4534.63 ms
+Execution 11 - QUIC Single
+Handshake duration: 853.11 ms
+Execution 12 - QUIC Single
+Handshake duration: 862.26 ms
+Execution 13 - QUIC Single
+Handshake duration: 831.34 ms
+Execution 14 - QUIC Single
+Handshake duration: 2227.24 ms
+Execution 15 - QUIC Single
+Handshake duration: 842.89 ms
+Execution 16 - QUIC Single
+Handshake duration: 836.73 ms
+Execution 17 - QUIC Single
+Handshake duration: 841.72 ms
+Execution 18 - QUIC Single
+Handshake duration: 860.93 ms
+Execution 19 - QUIC Single
+Handshake duration: 847.27 ms
+Execution 20 - QUIC Single
+Handshake duration: 839.19 ms
+Execution 21 - QUIC Single
+Handshake duration: 835.76 ms
+Execution 22 - QUIC Single
+Handshake duration: 837.03 ms
+Execution 23 - QUIC Single
+Handshake duration: 2228.62 ms
+Execution 24 - QUIC Single
+Handshake duration: 887.44 ms
+Execution 25 - QUIC Single
+Handshake duration: 1914.17 ms
+Execution 26 - QUIC Single
+Handshake duration: 836.19 ms
+Execution 27 - QUIC Single
+Handshake duration: 840.40 ms
+Execution 28 - QUIC Single
+Handshake duration: 896.01 ms
+Execution 29 - QUIC Single
+Handshake duration: 859.89 ms
+Execution 30 - QUIC Single
+Handshake duration: 837.98 ms
+Execution 31 - QUIC Single
+Handshake duration: 890.31 ms
+Execution 32 - QUIC Single
+Handshake duration: 825.90 ms
+Execution 33 - QUIC Single
+Handshake duration: 4496.33 ms
+Execution 34 - QUIC Single
+Handshake duration: 2233.10 ms
+Execution 35 - QUIC Single
+Handshake duration: 933.66 ms
+Execution 36 - QUIC Single
+Handshake duration: 843.35 ms
+Execution 37 - QUIC Single
+Handshake duration: 845.08 ms
+Execution 38 - QUIC Single
+Handshake duration: 4562.44 ms
+Execution 39 - QUIC Single
+Handshake duration: 830.98 ms
+Execution 40 - QUIC Single
+Handshake duration: 832.30 ms
+Execution 41 - QUIC Single
+Handshake duration: 3434.47 ms
+Execution 42 - QUIC Single
+Handshake duration: 846.13 ms
+Execution 43 - QUIC Single
+Handshake duration: 823.71 ms
+Execution 44 - QUIC Single
+Handshake duration: 843.81 ms
+Execution 45 - QUIC Single
+Handshake duration: 1613.28 ms
+Execution 46 - QUIC Single
+Handshake duration: 874.49 ms
+Execution 47 - QUIC Single
+Handshake duration: 827.46 ms
+Execution 48 - QUIC Single
+Handshake duration: 837.49 ms
+Execution 49 - QUIC Single
+Handshake duration: 828.08 ms
+Execution 50 - QUIC Single
+Handshake duration: 1634.53 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+ ==> Executing for SIG_ALG: mldsa65
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for mldsa65
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=mldsa65 and certificates created
+
+
+****************
+  -> KEM: P-384
+
+    Executing docker Server...
+serveur
+client
+3dda9807817d49ab7b29deb41f9183732a6af2811d5d3a74829aa8faba825500
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+d219e1e97242a1e209e6affeeede0e070e1bb699b27eabf966b308d0b6cdb278
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ead: root refcnt 7 limit 1000 delay 200ms loss 4% seed 9994505069117814394
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa65 and KEM_ALG=P-384
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1257.20 ms
+Execution 2 - QUIC Single
+Handshake duration: 811.09 ms
+Execution 3 - QUIC Single
+Handshake duration: 1808.36 ms
+Execution 4 - QUIC Single
+Handshake duration: 821.86 ms
+Execution 5 - QUIC Single
+Handshake duration: 837.08 ms
+Execution 6 - QUIC Single
+Handshake duration: 848.01 ms
+Execution 7 - QUIC Single
+Handshake duration: 814.71 ms
+Execution 8 - QUIC Single
+Handshake duration: 819.67 ms
+Execution 9 - QUIC Single
+Handshake duration: 814.43 ms
+Execution 10 - QUIC Single
+Handshake duration: 927.16 ms
+Execution 11 - QUIC Single
+Handshake duration: 1845.80 ms
+Execution 12 - QUIC Single
+Handshake duration: 1738.69 ms
+Execution 13 - QUIC Single
+Handshake duration: 813.77 ms
+Execution 14 - QUIC Single
+Handshake duration: 822.49 ms
+Execution 15 - QUIC Single
+Handshake duration: 821.83 ms
+Execution 16 - QUIC Single
+Handshake duration: 817.61 ms
+Execution 17 - QUIC Single
+Handshake duration: 3830.79 ms
+Execution 18 - QUIC Single
+Handshake duration: 4291.63 ms
+Execution 19 - QUIC Single
+Handshake duration: 1880.51 ms
+Execution 20 - QUIC Single
+Handshake duration: 841.15 ms
+Execution 21 - QUIC Single
+Handshake duration: 835.62 ms
+Execution 22 - QUIC Single
+Handshake duration: 813.93 ms
+Execution 23 - QUIC Single
+Handshake duration: 817.83 ms
+Execution 24 - QUIC Single
+Handshake duration: 812.11 ms
+Execution 25 - QUIC Single
+Handshake duration: 2254.67 ms
+Execution 26 - QUIC Single
+Handshake duration: 826.96 ms
+Execution 27 - QUIC Single
+Handshake duration: 837.11 ms
+Execution 28 - QUIC Single
+Handshake duration: 830.52 ms
+Execution 29 - QUIC Single
+Handshake duration: 1678.30 ms
+Execution 30 - QUIC Single
+Handshake duration: 3833.05 ms
+Execution 31 - QUIC Single
+Handshake duration: 820.37 ms
+Execution 32 - QUIC Single
+Handshake duration: 810.16 ms
+Execution 33 - QUIC Single
+Handshake duration: 861.58 ms
+Execution 34 - QUIC Single
+Handshake duration: 2251.97 ms
+Execution 35 - QUIC Single
+Handshake duration: 814.51 ms
+Execution 36 - QUIC Single
+Handshake duration: 836.35 ms
+Execution 37 - QUIC Single
+Handshake duration: 821.97 ms
+Execution 38 - QUIC Single
+Handshake duration: 882.16 ms
+Execution 39 - QUIC Single
+Handshake duration: 825.56 ms
+Execution 40 - QUIC Single
+Handshake duration: 867.80 ms
+Execution 41 - QUIC Single
+Handshake duration: 1815.20 ms
+Execution 42 - QUIC Single
+Handshake duration: 814.29 ms
+Execution 43 - QUIC Single
+Handshake duration: 810.39 ms
+Execution 44 - QUIC Single
+Handshake duration: 817.88 ms
+Execution 45 - QUIC Single
+Handshake duration: 7814.85 ms
+Execution 46 - QUIC Single
+Handshake duration: 844.57 ms
+Execution 47 - QUIC Single
+Handshake duration: 813.68 ms
+Execution 48 - QUIC Single
+Handshake duration: 835.10 ms
+Execution 49 - QUIC Single
+Handshake duration: 2262.88 ms
+Execution 50 - QUIC Single
+Handshake duration: 897.57 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x448
+
+    Executing docker Server...
+serveur
+client
+15571a3b3b5c8fc529cf41c26fd476506bbe7637ec31ea6cce580fd3a02868d7
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+d30279f74383046c8c097eed5d497abce01fb06cf0d95f2bfcc538b55c3589e5
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eaf: root refcnt 7 limit 1000 delay 200ms loss 4% seed 7490225051241487989
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa65 and KEM_ALG=x448
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1008.63 ms
+Execution 2 - QUIC Single
+Handshake duration: 815.86 ms
+Execution 3 - QUIC Single
+Handshake duration: 811.03 ms
+Execution 4 - QUIC Single
+Handshake duration: 2258.19 ms
+Execution 5 - QUIC Single
+Handshake duration: 849.81 ms
+Execution 6 - QUIC Single
+Handshake duration: 809.48 ms
+Execution 7 - QUIC Single
+Handshake duration: 805.65 ms
+Execution 8 - QUIC Single
+Handshake duration: 808.10 ms
+Execution 9 - QUIC Single
+Handshake duration: 808.75 ms
+Execution 10 - QUIC Single
+Handshake duration: 1626.80 ms
+Execution 11 - QUIC Single
+Handshake duration: 823.10 ms
+Execution 12 - QUIC Single
+Handshake duration: 828.07 ms
+Execution 13 - QUIC Single
+Handshake duration: 845.41 ms
+Execution 14 - QUIC Single
+Handshake duration: 830.29 ms
+Execution 15 - QUIC Single
+Handshake duration: 809.39 ms
+Execution 16 - QUIC Single
+Handshake duration: 824.21 ms
+Execution 17 - QUIC Single
+Handshake duration: 806.59 ms
+Execution 18 - QUIC Single
+Handshake duration: 816.16 ms
+Execution 19 - QUIC Single
+Handshake duration: 826.91 ms
+Execution 20 - QUIC Single
+Handshake duration: 817.87 ms
+Execution 21 - QUIC Single
+Handshake duration: 828.18 ms
+Execution 22 - QUIC Single
+Handshake duration: 2367.96 ms
+Execution 23 - QUIC Single
+Handshake duration: 1620.67 ms
+Execution 24 - QUIC Single
+Handshake duration: 817.79 ms
+Execution 25 - QUIC Single
+Handshake duration: 826.06 ms
+Execution 26 - QUIC Single
+Handshake duration: 821.51 ms
+Execution 27 - QUIC Single
+Handshake duration: 1810.11 ms
+Execution 28 - QUIC Single
+Handshake duration: 813.34 ms
+Execution 29 - QUIC Single
+Handshake duration: 807.12 ms
+Execution 30 - QUIC Single
+Handshake duration: 852.28 ms
+Execution 31 - QUIC Single
+Handshake duration: 823.50 ms
+Execution 32 - QUIC Single
+Handshake duration: 806.25 ms
+Execution 33 - QUIC Single
+Handshake duration: 817.75 ms
+Execution 34 - QUIC Single
+Handshake duration: 811.75 ms
+Execution 35 - QUIC Single
+Handshake duration: 840.88 ms
+Execution 36 - QUIC Single
+Handshake duration: 818.93 ms
+Execution 37 - QUIC Single
+Handshake duration: 812.34 ms
+Execution 38 - QUIC Single
+Handshake duration: 817.81 ms
+Execution 39 - QUIC Single
+Handshake duration: 841.18 ms
+Execution 40 - QUIC Single
+Handshake duration: 876.32 ms
+Execution 41 - QUIC Single
+Handshake duration: 821.05 ms
+Execution 42 - QUIC Single
+Handshake duration: 838.71 ms
+Execution 43 - QUIC Single
+Handshake duration: 964.49 ms
+Execution 44 - QUIC Single
+Handshake duration: 827.16 ms
+Execution 45 - QUIC Single
+Handshake duration: 1807.25 ms
+Execution 46 - QUIC Single
+Handshake duration: 809.62 ms
+Execution 47 - QUIC Single
+Handshake duration: 815.66 ms
+Execution 48 - QUIC Single
+Handshake duration: 813.39 ms
+Execution 49 - QUIC Single
+Handshake duration: 808.85 ms
+Execution 50 - QUIC Single
+Handshake duration: 809.34 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc192
+
+    Executing docker Server...
+serveur
+client
+286316999df9fe989582a45406689a1f43109f60d8e6d8f7df6fb377e7195e28
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+b1a6233d70e919edc497de0e912751b124ad4cb538de9e4b8fdc499982d95a1e
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eb2: root refcnt 7 limit 1000 delay 200ms loss 4% seed 13295861260174388505
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa65 and KEM_ALG=hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1391.19 ms
+Execution 2 - QUIC Single
+Handshake duration: 964.07 ms
+Execution 3 - QUIC Single
+Handshake duration: 2414.32 ms
+Execution 4 - QUIC Single
+Handshake duration: 1021.85 ms
+Execution 5 - QUIC Single
+Handshake duration: 1373.86 ms
+Execution 6 - QUIC Single
+Handshake duration: 960.44 ms
+Execution 7 - QUIC Single
+Handshake duration: 1415.71 ms
+Execution 8 - QUIC Single
+Handshake duration: 1354.47 ms
+Execution 9 - QUIC Single
+Handshake duration: 928.62 ms
+Execution 10 - QUIC Single
+Handshake duration: 952.40 ms
+Execution 11 - QUIC Single
+Handshake duration: 1359.52 ms
+Execution 12 - QUIC Single
+Handshake duration: 902.54 ms
+Execution 13 - QUIC Single
+Handshake duration: 954.86 ms
+Execution 14 - QUIC Single
+Handshake duration: 1249.71 ms
+Execution 15 - QUIC Single
+Handshake duration: 1444.95 ms
+Execution 16 - QUIC Single
+Handshake duration: 969.92 ms
+Execution 17 - QUIC Single
+Handshake duration: 908.81 ms
+Execution 18 - QUIC Single
+Handshake duration: 1125.70 ms
+Execution 19 - QUIC Single
+Handshake duration: 1349.33 ms
+Execution 20 - QUIC Single
+Handshake duration: 930.60 ms
+Execution 21 - QUIC Single
+Handshake duration: 927.56 ms
+Execution 22 - QUIC Single
+Handshake duration: 1060.55 ms
+Execution 23 - QUIC Single
+Handshake duration: 1365.01 ms
+Execution 24 - QUIC Single
+Handshake duration: 924.79 ms
+Execution 25 - QUIC Single
+Handshake duration: 926.68 ms
+Execution 26 - QUIC Single
+Handshake duration: 1447.31 ms
+Execution 27 - QUIC Single
+Handshake duration: 1661.74 ms
+Execution 28 - QUIC Single
+Handshake duration: 1354.28 ms
+Execution 29 - QUIC Single
+Handshake duration: 2166.01 ms
+Execution 30 - QUIC Single
+Handshake duration: 993.68 ms
+Execution 31 - QUIC Single
+Handshake duration: 1018.74 ms
+Execution 32 - QUIC Single
+Handshake duration: 1387.12 ms
+Execution 33 - QUIC Single
+Handshake duration: 1789.19 ms
+Execution 34 - QUIC Single
+Handshake duration: 1675.76 ms
+Execution 35 - QUIC Single
+Handshake duration: 1169.62 ms
+Execution 36 - QUIC Single
+Handshake duration: 1117.93 ms
+Execution 37 - QUIC Single
+Handshake duration: 1007.32 ms
+Execution 38 - QUIC Single
+Handshake duration: 984.44 ms
+Execution 39 - QUIC Single
+Handshake duration: 907.30 ms
+Execution 40 - QUIC Single
+Handshake duration: 1548.21 ms
+Execution 41 - QUIC Single
+Handshake duration: 1074.44 ms
+Execution 42 - QUIC Single
+Handshake duration: 933.22 ms
+Execution 43 - QUIC Single
+Handshake duration: 4541.63 ms
+Execution 44 - QUIC Single
+Handshake duration: 1355.30 ms
+Execution 45 - QUIC Single
+Handshake duration: 924.40 ms
+Execution 46 - QUIC Single
+Handshake duration: 893.82 ms
+Execution 47 - QUIC Single
+Handshake duration: 1156.52 ms
+Execution 48 - QUIC Single
+Handshake duration: 1018.63 ms
+Execution 49 - QUIC Single
+Handshake duration: 1007.41 ms
+Execution 50 - QUIC Single
+Handshake duration: 931.62 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p384_hqc192
+
+    Executing docker Server...
+serveur
+client
+343fe74731638fea175f0aaf643117118715186facf93ab95ab3a39a99d6f329
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+060cc458b8b4960181f0b27899f09122905ade07eed967e88bc91f7bf23703bd
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eb4: root refcnt 7 limit 1000 delay 200ms loss 4% seed 1893717099262357191
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa65 and KEM_ALG=p384_hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 3265.31 ms
+Execution 2 - QUIC Single
+Handshake duration: 1604.00 ms
+Execution 3 - QUIC Single
+Handshake duration: 951.13 ms
+Execution 4 - QUIC Single
+Handshake duration: 1005.71 ms
+Execution 5 - QUIC Single
+Handshake duration: 1525.90 ms
+Execution 6 - QUIC Single
+Handshake duration: 945.75 ms
+Execution 7 - QUIC Single
+Handshake duration: 951.57 ms
+Execution 8 - QUIC Single
+Handshake duration: 942.21 ms
+Execution 9 - QUIC Single
+Handshake duration: 2482.31 ms
+Execution 10 - QUIC Single
+Handshake duration: 924.94 ms
+Execution 11 - QUIC Single
+Handshake duration: 1060.81 ms
+Execution 12 - QUIC Single
+Handshake duration: 951.93 ms
+Execution 13 - QUIC Single
+Handshake duration: 898.88 ms
+Execution 14 - QUIC Single
+Handshake duration: 894.25 ms
+Execution 15 - QUIC Single
+Handshake duration: 907.33 ms
+Execution 16 - QUIC Single
+Handshake duration: 911.29 ms
+Execution 17 - QUIC Single
+Handshake duration: 928.97 ms
+Execution 18 - QUIC Single
+Handshake duration: 971.80 ms
+Execution 19 - QUIC Single
+Handshake duration: 5885.32 ms
+Execution 20 - QUIC Single
+Handshake duration: 921.42 ms
+Execution 21 - QUIC Single
+Handshake duration: 1482.31 ms
+Execution 22 - QUIC Single
+Handshake duration: 1466.49 ms
+Execution 23 - QUIC Single
+Handshake duration: 978.02 ms
+Execution 24 - QUIC Single
+Handshake duration: 929.49 ms
+Execution 25 - QUIC Single
+Handshake duration: 892.84 ms
+Execution 26 - QUIC Single
+Handshake duration: 1073.68 ms
+Execution 27 - QUIC Single
+Handshake duration: 914.33 ms
+Execution 28 - QUIC Single
+Handshake duration: 1452.27 ms
+Execution 29 - QUIC Single
+Handshake duration: 938.79 ms
+Execution 30 - QUIC Single
+Handshake duration: 910.31 ms
+Execution 31 - QUIC Single
+Handshake duration: 1069.72 ms
+Execution 32 - QUIC Single
+Handshake duration: 1502.33 ms
+Execution 33 - QUIC Single
+Handshake duration: 962.47 ms
+Execution 34 - QUIC Single
+Handshake duration: 940.67 ms
+Execution 35 - QUIC Single
+Handshake duration: 1851.46 ms
+Execution 36 - QUIC Single
+Handshake duration: 1629.58 ms
+Execution 37 - QUIC Single
+Handshake duration: 1355.99 ms
+Execution 38 - QUIC Single
+Handshake duration: 1297.04 ms
+Execution 39 - QUIC Single
+Handshake duration: 1399.71 ms
+Execution 40 - QUIC Single
+Handshake duration: 935.93 ms
+Execution 41 - QUIC Single
+Handshake duration: 893.94 ms
+Execution 42 - QUIC Single
+Handshake duration: 947.58 ms
+Execution 43 - QUIC Single
+Handshake duration: 5678.80 ms
+Execution 44 - QUIC Single
+Handshake duration: 4456.73 ms
+Execution 45 - QUIC Single
+Handshake duration: 923.87 ms
+Execution 46 - QUIC Single
+Handshake duration: 1641.29 ms
+Execution 47 - QUIC Single
+Handshake duration: 1499.31 ms
+Execution 48 - QUIC Single
+Handshake duration: 1315.62 ms
+Execution 49 - QUIC Single
+Handshake duration: 891.27 ms
+Execution 50 - QUIC Single
+Handshake duration: 893.81 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: x448_hqc192
+
+    Executing docker Server...
+serveur
+client
+537b093e71bbf55f1dff93404aad669d16ad0bcd5196a66440d6d7864962109f
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+3733196a5da65ddc2eec394ac4b52cdf58877240ed5d3cd6379f5ad07f08456f
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eb7: root refcnt 7 limit 1000 delay 200ms loss 4% seed 17143785084705617899
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa65 and KEM_ALG=x448_hqc192
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 904.15 ms
+Execution 2 - QUIC Single
+Handshake duration: 1727.80 ms
+Execution 3 - QUIC Single
+Handshake duration: 4997.31 ms
+Execution 4 - QUIC Single
+Handshake duration: 882.75 ms
+Execution 5 - QUIC Single
+Handshake duration: 891.49 ms
+Execution 6 - QUIC Single
+Handshake duration: 909.97 ms
+Execution 7 - QUIC Single
+Handshake duration: 884.08 ms
+Execution 8 - QUIC Single
+Handshake duration: 1081.57 ms
+Execution 9 - QUIC Single
+Handshake duration: 1403.99 ms
+Execution 10 - QUIC Single
+Handshake duration: 953.52 ms
+Execution 11 - QUIC Single
+Handshake duration: 5423.23 ms
+Execution 12 - QUIC Single
+Handshake duration: 1437.79 ms
+Execution 13 - QUIC Single
+Handshake duration: 1622.65 ms
+Execution 14 - QUIC Single
+Handshake duration: 929.21 ms
+Execution 15 - QUIC Single
+Handshake duration: 4507.36 ms
+Execution 16 - QUIC Single
+Handshake duration: 891.87 ms
+Execution 17 - QUIC Single
+Handshake duration: 1626.26 ms
+Execution 18 - QUIC Single
+Handshake duration: 1621.97 ms
+Execution 19 - QUIC Single
+Handshake duration: 946.57 ms
+Execution 20 - QUIC Single
+Handshake duration: 2824.47 ms
+Execution 21 - QUIC Single
+Handshake duration: 931.11 ms
+Execution 22 - QUIC Single
+Handshake duration: 922.50 ms
+Execution 23 - QUIC Single
+Handshake duration: 1059.09 ms
+Execution 24 - QUIC Single
+Handshake duration: 1544.08 ms
+Execution 25 - QUIC Single
+Handshake duration: 933.86 ms
+Execution 26 - QUIC Single
+Handshake duration: 1366.06 ms
+Execution 27 - QUIC Single
+Handshake duration: 945.51 ms
+Execution 28 - QUIC Single
+Handshake duration: 4672.61 ms
+Execution 29 - QUIC Single
+Handshake duration: 963.19 ms
+Execution 30 - QUIC Single
+Handshake duration: 1452.05 ms
+Execution 31 - QUIC Single
+Handshake duration: 900.52 ms
+Execution 32 - QUIC Single
+Handshake duration: 1397.65 ms
+Execution 33 - QUIC Single
+Handshake duration: 938.03 ms
+Execution 34 - QUIC Single
+Handshake duration: 1325.83 ms
+Execution 35 - QUIC Single
+Handshake duration: 1088.56 ms
+Execution 36 - QUIC Single
+Handshake duration: 968.68 ms
+Execution 37 - QUIC Single
+Handshake duration: 937.83 ms
+Execution 38 - QUIC Single
+Handshake duration: 918.68 ms
+Execution 39 - QUIC Single
+Handshake duration: 1186.28 ms
+Execution 40 - QUIC Single
+Handshake duration: 1021.66 ms
+Execution 41 - QUIC Single
+Handshake duration: 889.32 ms
+Execution 42 - QUIC Single
+Handshake duration: 4726.48 ms
+Execution 43 - QUIC Single
+Handshake duration: 980.64 ms
+Execution 44 - QUIC Single
+Handshake duration: 934.72 ms
+Execution 45 - QUIC Single
+Handshake duration: 978.62 ms
+Execution 46 - QUIC Single
+Handshake duration: 897.93 ms
+Execution 47 - QUIC Single
+Handshake duration: 879.78 ms
+Execution 48 - QUIC Single
+Handshake duration: 922.68 ms
+Execution 49 - QUIC Single
+Handshake duration: 1114.69 ms
+Execution 50 - QUIC Single
+Handshake duration: 950.68 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+ ==> Executing for SIG_ALG: mldsa87
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for mldsa87
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=mldsa87 and certificates created
+
+
+****************
+  -> KEM: P-521
+
+    Executing docker Server...
+serveur
+client
+3d7686a3d7da17c6d760866e38c7b5d14d5ca1b36d5213bc7ed65f4c26cd2d41
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+5c1c3dd6c178942d89f580839f8f3ee28d5de8d7ddc008e61092f93d620e2e04
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9eba: root refcnt 7 limit 1000 delay 200ms loss 4% seed 4135626913564985805
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa87 and KEM_ALG=P-521
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 1268.84 ms
+Execution 2 - QUIC Single
+Handshake duration: 820.93 ms
+Execution 3 - QUIC Single
+Handshake duration: 833.78 ms
+Execution 4 - QUIC Single
+Handshake duration: 818.49 ms
+Execution 5 - QUIC Single
+Handshake duration: 817.91 ms
+Execution 6 - QUIC Single
+Handshake duration: 807.01 ms
+Execution 7 - QUIC Single
+Handshake duration: 823.81 ms
+Execution 8 - QUIC Single
+Handshake duration: 834.05 ms
+Execution 9 - QUIC Single
+Handshake duration: 857.47 ms
+Execution 10 - QUIC Single
+Handshake duration: 2060.20 ms
+Execution 11 - QUIC Single
+Handshake duration: 822.71 ms
+Execution 12 - QUIC Single
+Handshake duration: 810.60 ms
+Execution 13 - QUIC Single
+Handshake duration: 886.60 ms
+Execution 14 - QUIC Single
+Handshake duration: 902.44 ms
+Execution 15 - QUIC Single
+Handshake duration: 809.78 ms
+Execution 16 - QUIC Single
+Handshake duration: 818.21 ms
+Execution 17 - QUIC Single
+Handshake duration: 2266.55 ms
+Execution 18 - QUIC Single
+Handshake duration: 824.21 ms
+Execution 19 - QUIC Single
+Handshake duration: 818.32 ms
+Execution 20 - QUIC Single
+Handshake duration: 878.05 ms
+Execution 21 - QUIC Single
+Handshake duration: 826.01 ms
+Execution 22 - QUIC Single
+Handshake duration: 836.32 ms
+Execution 23 - QUIC Single
+Handshake duration: 829.91 ms
+Execution 24 - QUIC Single
+Handshake duration: 3850.75 ms
+Execution 25 - QUIC Single
+Handshake duration: 869.57 ms
+Execution 26 - QUIC Single
+Handshake duration: 4567.54 ms
+Execution 27 - QUIC Single
+Handshake duration: 829.61 ms
+Execution 28 - QUIC Single
+Handshake duration: 892.51 ms
+Execution 29 - QUIC Single
+Handshake duration: 818.01 ms
+Execution 30 - QUIC Single
+Handshake duration: 1021.50 ms
+Execution 31 - QUIC Single
+Handshake duration: 814.40 ms
+Execution 32 - QUIC Single
+Handshake duration: 808.67 ms
+Execution 33 - QUIC Single
+Handshake duration: 843.29 ms
+Execution 34 - QUIC Single
+Handshake duration: 864.85 ms
+Execution 35 - QUIC Single
+Handshake duration: 815.01 ms
+Execution 36 - QUIC Single
+Handshake duration: 829.84 ms
+Execution 37 - QUIC Single
+Handshake duration: 813.04 ms
+Execution 38 - QUIC Single
+Handshake duration: 812.39 ms
+Execution 39 - QUIC Single
+Handshake duration: 807.55 ms
+Execution 40 - QUIC Single
+Handshake duration: 848.22 ms
+Execution 41 - QUIC Single
+Handshake duration: 3853.19 ms
+Execution 42 - QUIC Single
+Handshake duration: 821.50 ms
+Execution 43 - QUIC Single
+Handshake duration: 850.76 ms
+Execution 44 - QUIC Single
+Handshake duration: 816.40 ms
+Execution 45 - QUIC Single
+Handshake duration: 847.20 ms
+Execution 46 - QUIC Single
+Handshake duration: 831.39 ms
+Execution 47 - QUIC Single
+Handshake duration: 808.68 ms
+Execution 48 - QUIC Single
+Handshake duration: 831.32 ms
+Execution 49 - QUIC Single
+Handshake duration: 834.04 ms
+Execution 50 - QUIC Single
+Handshake duration: 858.74 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: hqc256
+
+    Executing docker Server...
+serveur
+client
+4ab38edf6098eee820a07c4ade27735aa3d670301720c07f3218ae0b25f49d81
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+fab6554a3fa539a4204f5593c4299e0de2d70fbcbf17a67cb1cfff1ca90367fb
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ebc: root refcnt 7 limit 1000 delay 200ms loss 4% seed 6718187084559206179
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa87 and KEM_ALG=hqc256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 3407.24 ms
+Execution 2 - QUIC Single
+Handshake duration: 2421.52 ms
+Execution 3 - QUIC Single
+Handshake duration: 2174.80 ms
+Execution 4 - QUIC Single
+Handshake duration: 2548.25 ms
+Execution 5 - QUIC Single
+Handshake duration: 2841.45 ms
+Execution 6 - QUIC Single
+Handshake duration: 2210.72 ms
+Execution 7 - QUIC Single
+Handshake duration: 4697.84 ms
+Execution 8 - QUIC Single
+Handshake duration: 3005.34 ms
+Execution 9 - QUIC Single
+Handshake duration: 2260.88 ms
+Execution 10 - QUIC Single
+Handshake duration: 1959.87 ms
+Execution 11 - QUIC Single
+Handshake duration: 2271.47 ms
+Execution 12 - QUIC Single
+Handshake duration: 2439.69 ms
+Execution 13 - QUIC Single
+Handshake duration: 2229.37 ms
+Execution 14 - QUIC Single
+Handshake duration: 2141.67 ms
+Execution 15 - QUIC Single
+Handshake duration: 2173.95 ms
+Execution 16 - QUIC Single
+Handshake duration: 2057.97 ms
+Execution 17 - QUIC Single
+Handshake duration: 2037.96 ms
+Execution 18 - QUIC Single
+Handshake duration: 2138.87 ms
+Execution 19 - QUIC Single
+Handshake duration: 1223.27 ms
+Execution 20 - QUIC Single
+Handshake duration: 1170.92 ms
+Execution 21 - QUIC Single
+Handshake duration: 2253.14 ms
+Execution 22 - QUIC Single
+Handshake duration: 2174.82 ms
+Execution 23 - QUIC Single
+Handshake duration: 1976.91 ms
+Execution 24 - QUIC Single
+Handshake duration: 2043.58 ms
+Execution 25 - QUIC Single
+Handshake duration: 5460.73 ms
+Execution 26 - QUIC Single
+Handshake duration: 2149.56 ms
+Execution 27 - QUIC Single
+Handshake duration: 3692.59 ms
+Execution 28 - QUIC Single
+Handshake duration: 2100.03 ms
+Execution 29 - QUIC Single
+Handshake duration: 2103.81 ms
+Execution 30 - QUIC Single
+Handshake duration: 2108.29 ms
+Execution 31 - QUIC Single
+Handshake duration: 2778.52 ms
+Execution 32 - QUIC Single
+Handshake duration: 3764.71 ms
+Execution 33 - QUIC Single
+Handshake duration: 1340.12 ms
+Execution 34 - QUIC Single
+Handshake duration: 2397.31 ms
+Execution 35 - QUIC Single
+Handshake duration: 2369.14 ms
+Execution 36 - QUIC Single
+Handshake duration: 2522.34 ms
+Execution 37 - QUIC Single
+Handshake duration: 2221.27 ms
+Execution 38 - QUIC Single
+Handshake duration: 2444.00 ms
+Execution 39 - QUIC Single
+Handshake duration: 2207.30 ms
+Execution 40 - QUIC Single
+Handshake duration: 2658.24 ms
+Execution 41 - QUIC Single
+Handshake duration: 4010.38 ms
+Execution 42 - QUIC Single
+Handshake duration: 2711.09 ms
+Execution 43 - QUIC Single
+Handshake duration: 4150.82 ms
+Execution 44 - QUIC Single
+Handshake duration: 1459.18 ms
+Execution 45 - QUIC Single
+Handshake duration: 2766.89 ms
+Execution 46 - QUIC Single
+Handshake duration: 2063.27 ms
+Execution 47 - QUIC Single
+Handshake duration: 2390.13 ms
+Execution 48 - QUIC Single
+Handshake duration: 4470.57 ms
+Execution 49 - QUIC Single
+Handshake duration: 2093.95 ms
+Execution 50 - QUIC Single
+Handshake duration: 2212.60 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+
+****************
+  -> KEM: p521_hqc256
+
+    Executing docker Server...
+serveur
+client
+f17076469752f839dcd5c53ccb4f9d0f305eaeada477f1261ac6786320061e8c
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=4%
+    Executing docker Client... 172.18.0.2
+faa66d21cbff859f1b4378d1dfd33fe23892d8c346998e1076f39ff3a460b088
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=4%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9ebe: root refcnt 7 limit 1000 delay 200ms loss 4% seed 13564042757032820986
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=mldsa87 and KEM_ALG=p521_hqc256
+Execution 1 - QUIC Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 2910.14 ms
+Execution 2 - QUIC Single
+Handshake duration: 3489.63 ms
+Execution 3 - QUIC Single
+Handshake duration: 1415.82 ms
+Execution 4 - QUIC Single
+Handshake duration: 2240.13 ms
+Execution 5 - QUIC Single
+Handshake duration: 2017.03 ms
+Execution 6 - QUIC Single
+Handshake duration: 2438.75 ms
+Execution 7 - QUIC Single
+Handshake duration: 3590.83 ms
+Execution 8 - QUIC Single
+Handshake duration: 2404.24 ms
+Execution 9 - QUIC Single
+Handshake duration: 2087.29 ms
+Execution 10 - QUIC Single
+Handshake duration: 2271.72 ms
+Execution 11 - QUIC Single
+Handshake duration: 2038.87 ms
+Execution 12 - QUIC Single
+Handshake duration: 2820.45 ms
+Execution 13 - QUIC Single
+Handshake duration: 2223.97 ms
+Execution 14 - QUIC Single
+Handshake duration: 3390.78 ms
+Execution 15 - QUIC Single
+Handshake duration: 2561.27 ms
+Execution 16 - QUIC Single
+Handshake duration: 2215.37 ms
+Execution 17 - QUIC Single
+Handshake duration: 2693.25 ms
+Execution 18 - QUIC Single
+Handshake duration: 3009.82 ms
+Execution 19 - QUIC Single
+Handshake duration: 3269.92 ms
+Execution 20 - QUIC Single
+Handshake duration: 2505.69 ms
+Execution 21 - QUIC Single
+Handshake duration: 2671.99 ms
+Execution 22 - QUIC Single
+Handshake duration: 1844.75 ms
+Execution 23 - QUIC Single
+Handshake duration: 2033.22 ms
+Execution 24 - QUIC Single
+Handshake duration: 2548.27 ms
+Execution 25 - QUIC Single
+Handshake duration: 2210.07 ms
+Execution 26 - QUIC Single
+Handshake duration: 2745.65 ms
+Execution 27 - QUIC Single
+Handshake duration: 2202.71 ms
+Execution 28 - QUIC Single
+Handshake duration: 2495.94 ms
+Execution 29 - QUIC Single
+Handshake duration: 2066.77 ms
+Execution 30 - QUIC Single
+Handshake duration: 2172.29 ms
+Execution 31 - QUIC Single
+Handshake duration: 2006.76 ms
+Execution 32 - QUIC Single
+Handshake duration: 2076.24 ms
+Execution 33 - QUIC Single
+Handshake duration: 2175.16 ms
+Execution 34 - QUIC Single
+Handshake duration: 1210.77 ms
+Execution 35 - QUIC Single
+Handshake duration: 2633.64 ms
+Execution 36 - QUIC Single
+Handshake duration: 2157.30 ms
+Execution 37 - QUIC Single
+Handshake duration: 2081.44 ms
+Execution 38 - QUIC Single
+Handshake duration: 3772.00 ms
+Execution 39 - QUIC Single
+Handshake duration: 2547.68 ms
+Execution 40 - QUIC Single
+Handshake duration: 2416.58 ms
+Execution 41 - QUIC Single
+Handshake duration: 6908.10 ms
+Execution 42 - QUIC Single
+Handshake duration: 2447.47 ms
+Execution 43 - QUIC Single
+Handshake duration: 2466.99 ms
+Execution 44 - QUIC Single
+Handshake duration: 2426.86 ms
+Execution 45 - QUIC Single
+Handshake duration: 2211.25 ms
+Execution 46 - QUIC Single
+Handshake duration: 2424.14 ms
+Execution 47 - QUIC Single
+Handshake duration: 2267.07 ms
+Execution 48 - QUIC Single
+Handshake duration: 3457.31 ms
+Execution 49 - QUIC Single
+Handshake duration: 2251.71 ms
+Execution 50 - QUIC Single
+Handshake duration: 2135.16 ms
+     Waiting  ... 
+   Shutting down server and impairments...
+cert
+localNet
+✅  Cleanup complete. Tests finished.

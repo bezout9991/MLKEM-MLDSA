@@ -1,0 +1,89 @@
+*************************************
+Parameters valid. Starting with:
+  Protocol:        tls
+  Auth Mode:       single
+  Capture Mode:    nocapture
+  Network Profile: simple
+  Loss %:          10
+  Delay (ms):      200
+  Executions:      50
+  Signature:       ed25519 secp384r1 secp521r1 mldsa44 mldsa65 mldsa87
+  KEMS Level 1:    P-256 x25519 hqc128 p256_hqc128 x25519_hqc128
+  KEMS Level 3:    P-384 x448 hqc192 p384_hqc192 x448_hqc192
+  KEMS Level 5:    P-521 hqc256 p521_hqc256
+*************************************
+Runnig on Linux
+
+*************************************
+***NETWORK AND VOLUMEN **************
+*************************************
+dc52e024c5721bdf2b3834e516e7e1cd53b620a5bd3c511eb598edced4120216
+✅ Red localNet created.
+cert
+✅ Volumen cert created.
+*************************************
+
+ ==> Executing for SIG_ALG: ed25519
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for ed25519
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=ed25519 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Executing docker Server...
+ab2d57af4f760b55887b411b08d4de82dc470407cc8be625ade262c0a1d5b78f
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ tc serveur: delay=200ms loss=10%
+    Executing docker Client... 172.18.0.2
+cca52d160a2b5378966414e63b1a63808295f827bb84ce9860a2deb865188661
+client
+     Docker client executed ... 
+   ↳ Pumba client: delay=200ms loss=10%
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9e2f: root refcnt 7 limit 1000 delay 200ms loss 10% seed 6357402210550846003
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=P-256
+Execution 1 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 2854.50 ms
+Execution 2 - TLS Single
+Handshake duration: 804.99 ms
+Execution 3 - TLS Single
+Handshake duration: 804.38 ms
+Execution 4 - TLS Single
+Handshake duration: 805.96 ms
+Execution 5 - TLS Single
+Handshake duration: 803.86 ms
+Execution 6 - TLS Single
+Handshake duration: 803.51 ms
+Execution 7 - TLS Single
+Handshake duration: 1857.73 ms
+Execution 8 - TLS Single
+Handshake duration: 1847.04 ms
+Execution 9 - TLS Single
+Handshake duration: 805.40 ms
+Execution 10 - TLS Single
+Handshake duration: 804.41 ms
+Execution 11 - TLS Single
+Execution 11 - TIMEOUT
+Execution 12 - TLS Single
+Execution 12 - TIMEOUT
+Execution 13 - TLS Single

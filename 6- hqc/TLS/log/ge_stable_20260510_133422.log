@@ -1,0 +1,83 @@
+*************************************
+Parameters valid. Starting with:
+  Protocol:        tls
+  Auth Mode:       single
+  Capture Mode:    nocapture
+  Network Profile: stable
+  Loss %:          0
+  Delay (ms):      0
+  Executions:      50
+  Signature:       ed25519 secp384r1 secp521r1 mldsa44 mldsa65 mldsa87
+  KEMS Level 1:    P-256 x25519 hqc128 p256_hqc128 x25519_hqc128
+  KEMS Level 3:    P-384 x448 hqc192 p384_hqc192 x448_hqc192
+  KEMS Level 5:    P-521 hqc256 p521_hqc256
+*************************************
+Runnig on Linux
+
+*************************************
+***NETWORK AND VOLUMEN **************
+*************************************
+a068a0d3ca847a71ca9d83875d7c343864f628c844fbc19336ff0a3fb31c5b1f
+✅ Red localNet created.
+cert
+✅ Volumen cert created.
+*************************************
+
+ ==> Executing for SIG_ALG: ed25519
+
+ ==> Creating Certs and Keys
+Creating certificates
+Using default procedure for ed25519
+-----
+-----
+Certificate request self-signature ok
+subject=CN==localhost
+-----
+Certificate request self-signature ok
+subject=CN==user
+Running /opt/oqssa/bin/doCert.sh with SIG_ALG=ed25519 and certificates created
+
+
+****************
+  -> KEM: P-256
+
+    Executing docker Server...
+5a7a57c49348e5e8f3c7635b8dcc3709f9ae116fbfc4120d783ad5c19ca46a8a
+    Buscando IP.. 
+    IP..  172.18.0.2
+   ↳ Pumba serveur stable (pg10 pb50 h70 k10)
+  -> Pumba: application des regles tc sur serveur
+  ✅ Regles tc appliquees sur serveur
+   ↳ Pumba client stable (même profil)
+  -> Pumba: application des regles tc sur client
+  ⚠ Erreur lors de l'application des regles tc sur client
+  ✅ Regles tc appliquees sur client
+    Executing docker Client... 172.18.0.2
+0476a7a2dbf96c63574ab5eb8ba5383a0668a6b008a76f97bfc7cd1cb59e51a5
+client
+     Docker client executed ... 
+   ↳ Pumba client: stable (pg10 pb50 h70 k10)
+
+**************************
+     Executing test  ... 
+  -> Pumba: application des regles tc sur client
+Applying netem rules to eth0...
+Showing qdisc status for the interface: eth0
+qdisc netem 9f19: root refcnt 7 limit 1000 seed 9747793187252152471
+ Sent 0 bytes 0 pkt (dropped 0, overlimits 0 requeues 0) 
+ backlog 0b 0p requeues 0
+Running ./perftestClientTlsQuic.sh with SIG_ALG=ed25519 and KEM_ALG=P-256
+Execution 1 - TLS Single
+Handshake duration: 15.47 ms
+Execution 2 - TLS Single
+  ✅ Regles tc appliquees sur client
+Handshake duration: 3260.28 ms
+Execution 3 - TLS Single
+Handshake duration: 4.04 ms
+Execution 4 - TLS Single
+Handshake duration: 4.14 ms
+Execution 5 - TLS Single
+Execution 5 - TIMEOUT
+Execution 6 - TLS Single
+Execution 6 - TIMEOUT
+Execution 7 - TLS Single

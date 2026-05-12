@@ -1,0 +1,60 @@
+
+=== Traffic by Level & KEM ===
+Protocol  Level              KEM    QUIC     TLS  TLS_over_QUIC
+0             1            P-256  3963.0  1888.0       0.476407
+1             1         mlkem512  5483.0  3318.0       0.605143
+2             1    p256_mlkem512  5548.0  3448.0       0.621485
+3             1           x25519  3963.0  1822.0       0.459753
+4             1  x25519_mlkem512  5515.0  3382.0       0.613237
+5             3            P-384  3963.0  2115.0       0.533687
+6             3         mlkem768  5949.0  4184.0       0.703311
+7             3    p384_mlkem768  6403.0  4380.0       0.684054
+8             3             x448  3963.0  2032.0       0.512743
+9             3    x448_mlkem768  6403.0  4297.0       0.671092
+10            5            P-521  3963.0  2298.0       0.579864
+11            5        mlkem1024  6598.0  5160.0       0.782055
+12            5   p521_mlkem1024  6731.0  5426.0       0.806121
+
+=== TLS Traffic Breakdown ===
+    Level              KEM  Traffic_Bytes  Traffic_TCP  Traffic_TLS
+0       1            P-256         1888.0        412.0       1476.0
+1       1         mlkem512         3318.0        412.0       2906.0
+2       1    p256_mlkem512         3448.0        412.0       3036.0
+3       1           x25519         1822.0        412.0       1410.0
+4       1  x25519_mlkem512         3382.0        412.0       2970.0
+5       3            P-384         2115.0        412.0       1703.0
+6       3         mlkem768         4184.0        412.0       3772.0
+7       3    p384_mlkem768         4380.0        412.0       3968.0
+8       3             x448         2032.0        412.0       1620.0
+9       3    x448_mlkem768         4297.0        412.0       3885.0
+10      5            P-521         2298.0        412.0       1886.0
+11      5        mlkem1024         5160.0        412.0       4748.0
+12      5   p521_mlkem1024         5426.0        412.0       5014.0
+
+=== Hybrid Overhead (bytes) ===
+  Protocol  Level  ... Overhead_vs_Traditional  Overhead_vs_PostQuantum
+0     QUIC      1  ...                  1585.0                     65.0
+1     QUIC      1  ...                  1552.0                     32.0
+2     QUIC      3  ...                  2440.0                    454.0
+3     QUIC      3  ...                  2440.0                    454.0
+4     QUIC      5  ...                  2768.0                    133.0
+5      TLS      1  ...                  1593.0                    130.0
+6      TLS      1  ...                  1527.0                     64.0
+7      TLS      3  ...                  2306.5                    196.0
+8      TLS      3  ...                  2223.5                    113.0
+9      TLS      5  ...                  3128.0                    266.0
+
+[10 rows x 5 columns]
+
+=== Key Findings ===
+- QUIC: maximum traffic = 6731 bytes for p521_mlkem1024 (Level 5)
+- TLS: maximum traffic = 5426 bytes for p521_mlkem1024 (Level 5)
+- QUIC: minimum traffic = 3963 bytes for P-256 (Level 1)
+- TLS: minimum traffic = 1822 bytes for x25519 (Level 1)
+- Largest TLS/QUIC ratio = 0.81× for p521_mlkem1024 (Level 5)
+
+- Average hybrid overhead (bytes):
+          Overhead_vs_Traditional  Overhead_vs_PostQuantum
+Protocol                                                  
+QUIC                       2157.0                    227.6
+TLS                        2155.6                    153.8
